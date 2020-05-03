@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const primaryColor = '#4054B2';
+export const lightBackgound = '#EBF6FB';
 export const textColor = '#333333';
 export const lightTextColor = '#cccccc';
 export const lightLinkColor = '#ffffff';
@@ -81,7 +82,7 @@ export const Bar = styled.div`
 `
 
 export const LightCardBoard = styled.section`
-  background-color: #ebf6fb;
+  background-color: ${lightBackgound};
 `
 
 export const Card = styled.div`

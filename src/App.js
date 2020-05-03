@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 import YAML from "yaml";
 
-import {Bar, Card, Column, Container, LightCardBoard, Row} from "./components/styleUtils";
+import {Bar, Card, Column, Container, lightBackgound, LightCardBoard, Row} from "./components/styleUtils";
 import Company from "./components/Company";
 import Search from "./components/Search";
 import Footer from "./components/Footer";
@@ -13,6 +13,24 @@ import tagsFile from "./data/tags.yml";
 import './App.css';
 import LastCompanies from "./components/LastCompanies";
 import logo from './logo.svg';
+
+const ToolbarLogo = (props) => (
+  <div style={{
+    border: '2px solid rgba(253, 246, 251, 0.3)',
+    padding: 0,
+    'border-radius': '5px'
+  }}>
+  <img src={logo}
+       style={{
+         height: '51px',
+         background: lightBackgound,
+         display: 'block',
+         padding: '5px',
+         'border-radius': '3px'
+       }}
+       alt=".name" />
+  </div>
+);
 
 class App extends React.Component {
   constructor(props) {
@@ -41,7 +59,7 @@ class App extends React.Component {
               <Row>
                 <Column><Card padding="30px">
                   <img src={logo}
-                       style={{'height': '200px', 'margin-top': '30px', 'margin-right': '30px', display: 'inline'}}
+                       style={{'height': '200px', 'marginTop': '30px', 'marginRight': '30px', display: 'inline'}}
                        align="left"
                        alt=".name" />
                   <p>
@@ -71,7 +89,7 @@ class App extends React.Component {
               <Column size="fixed">
                 <Switch>
                   <Route exact path="/" /><Route path="/">
-                  <Link to="/">SUPER LOGO</Link>
+                  <Link to="/"><ToolbarLogo /></Link>
                 </Route>
                 </Switch>
               </Column>
