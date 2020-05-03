@@ -1,10 +1,10 @@
 import React from 'react';
-import {Bar, Right} from "./styleUtils";
+import {Bar, Center} from "./styleUtils";
 
 
 const Footer = () => (
   <Bar as="footer">
-    <Right>Made by <a href="https://jillroyer.me">Jill</a></Right>
+    <Center>Made by <a href="https://jillroyer.me">Jill</a></Center>
   </Bar>
 );
 

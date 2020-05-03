@@ -58,6 +58,7 @@ export const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
+  height: 100%;
 `
 
 export const Column = styled.div`
@@ -65,6 +66,7 @@ export const Column = styled.div`
     @media(max-width: ${collapse}px) {
       min-width: 100%;
     }
+    min-width: ${collapse}px;
     `
   };
   flex-basis: ${({size}) => size === 'fixed' ? 'auto' : (size || 0.5) * 100 + "%"};

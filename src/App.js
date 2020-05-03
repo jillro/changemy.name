@@ -55,7 +55,7 @@ class App extends React.Component {
       <Router>
         <Bar as="header">
           <Route exact path="/">
-            <Container size="window">
+            <Container size="window" as="div">
               <Row>
                 <Column collapse="600"><Card padding="30px">
                   <img src={logo}
@@ -69,7 +69,7 @@ class App extends React.Component {
                        align="left"
                        alt=".name" />
                   <p>
-                    Nowadays, hundreds of websites and companies keep our personal informations in their databases.
+                    Hundreds of websites and companies keep our personal informations in their databases.
                     Those informations are sometimes public to other people on the Internet.
                   </p><p>
                     Changing public identity, names and gender, is one of the complicated tasks of gender transition.
@@ -85,12 +85,12 @@ class App extends React.Component {
                     <li>in particular, never disclose their former name</li>
                   </ul>
                 </Card></Column>
-                <Column size={1/4} style={{'background': 'url(/woman.png) no-repeat top center / contain'}}  />
-                <Column size={1/4} style={{'background': 'url(/man.png) no-repeat bottom center / contain'}}  />
+                <Column size={1/4} style={{background: 'url(/woman.png) no-repeat center center / contain'}} />
+                <Column size={1/4} style={{background: 'url(/man.png) no-repeat bottom center / contain'}} />
               </Row>
             </Container>
           </Route>
-          <Container>
+          <Container as="div">
             <Row>
               <Switch><Route exact path="/" /><Route path="/">
                 <Column size="fixed">
