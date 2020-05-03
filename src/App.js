@@ -18,7 +18,7 @@ const ToolbarLogo = (props) => (
   <div style={{
     border: '2px solid rgba(253, 246, 251, 0.3)',
     padding: 0,
-    'border-radius': '5px'
+    borderRadius: '5px'
   }}>
   <img src={logo}
        style={{
@@ -26,7 +26,7 @@ const ToolbarLogo = (props) => (
          background: lightBackgound,
          display: 'block',
          padding: '5px',
-         'border-radius': '3px'
+         borderRadius: '3px'
        }}
        alt=".name" />
   </div>
