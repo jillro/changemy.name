@@ -61,9 +61,14 @@ export const Row = styled.div`
 `
 
 export const Column = styled.div`
-  min-width: ${props=> props.size === 'fixed' ? 'none' : '400px'};
-  flex-basis: ${props => props.size === 'fixed' ? 'auto' : (props.size ? (props.size * 50) + "%" : '50%')};
-  flex-grow: ${props => props.size === 'fixed' ? 0 : (props.size || 1)};;
+  ${({collapse}) => collapse && `
+    @media(max-width: ${collapse}px) {
+      min-width: 100%;
+    }
+    `
+  };
+  flex-basis: ${({size}) => size === 'fixed' ? 'auto' : (size || 0.5) * 100 + "%"};
+  flex-grow: ${({size}) => size === 'fixed' ? 0 : (size || 1)};
   padding-left: ${gutter};
   padding-right: ${gutter};
 `

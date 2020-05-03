@@ -57,9 +57,15 @@ class App extends React.Component {
           <Route exact path="/">
             <Container size="window">
               <Row>
-                <Column><Card padding="30px">
+                <Column collapse="600"><Card padding="30px">
                   <img src={logo}
-                       style={{'height': '200px', 'marginTop': '30px', 'marginRight': '30px', display: 'inline'}}
+                       style={{
+                         height: '200px',
+                         marginTop: '30px',
+                         marginRight: '30px',
+                         marginBottom: '10px',
+                         display: 'inline'
+                       }}
                        align="left"
                        alt=".name" />
                   <p>
@@ -79,20 +85,18 @@ class App extends React.Component {
                     <li>in particular, never disclose their former name</li>
                   </ul>
                 </Card></Column>
-                <Column size={0.5} style={{'background': 'url(/woman.png) no-repeat top center / contain'}}  />
-                <Column size={0.5} style={{'background': 'url(/man.png) no-repeat bottom center / contain'}}  />
+                <Column size={1/4} style={{'background': 'url(/woman.png) no-repeat top center / contain'}}  />
+                <Column size={1/4} style={{'background': 'url(/man.png) no-repeat bottom center / contain'}}  />
               </Row>
             </Container>
           </Route>
           <Container>
             <Row>
-              <Column size="fixed">
-                <Switch>
-                  <Route exact path="/" /><Route path="/">
+              <Switch><Route exact path="/" /><Route path="/">
+                <Column size="fixed">
                   <Link to="/"><ToolbarLogo /></Link>
-                </Route>
-                </Switch>
-              </Column>
+                </Column>
+              </Route></Switch>
               <Column>
                 <Search {...this.state} />
               </Column>

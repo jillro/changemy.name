@@ -9,7 +9,7 @@ const LastCompanies = ({companiesData, tagsData}) => (
     <h1>Last companies</h1>
     <Row>
       {Object.entries(companiesData).slice(0, 2).map(([slug, company]) => (
-          <Column key={slug}><Card>
+          <Column key={slug} collapse="300"><Card>
             <Link to={`/${slug}`}><BrandName>{company.name}</BrandName></Link>
             <TagList company={company} tagsData={tagsData}/>
           </Card>
