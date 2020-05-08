@@ -1,0 +1,82 @@
+support:
+  type: warning
+  labels:
+    en: User needs to write to support explaining situation, althouth the
+      change could be automated with a form.
+    fr: Il est nécessaire d'écrire au support, alors que le changement pourrait se faire automatiquement.
+
+support.ok:
+  type: information
+  labels:
+    en: User needs to write to support but this is justified for legal or security reasons.
+    fr: Il est nécessaire d'écrire au support, mais cela s'explique pour des raisons légales ou de sécurité.
+
+good_support:
+  type: good
+  labels:
+    en: Support is polite and do not misgenders users.
+    fr: Le support est poli et ne mégenre pas les utilisateurices.
+
+bad_support:
+  type: bad
+  labels:
+    en: Support staff sometimes or always misgenders users.
+    fr: Le support mégenre parfois ou toujours les utilisateurices.
+
+ask_for_papers:
+  type: bad
+  labels:
+    en: Legal papers are required, although they are not necessary to open an account.
+    fr: Des papiers d'identité sont demandés, alors qu'ils ne sont pas nécessaires pour créer un compte.
+
+ask_for_papers.ok:
+  type: information
+  labels:
+    en: Legal papers are required, but this is justified by legal or security constraints.
+    fr: Des papiers d'identité sont demandés, mais cela s'explique par des raisons légales ou de sécurité.
+
+new_account:
+  type: blocking
+  labels:
+    en: Support tell users to open a new account.
+    fr: Le support répond aux utilisateurices d'ouvrir un nouveau compte.
+
+new_account_before_insist:
+  type: bad
+  labels:
+    en: Support tell users to create new account, but accept to change name after users insist or quote legal texts.
+    fr: Le support répond aux utilsiaterus de créer un nouveau compte, mais accepte le changement de nom après que
+      l'utilisateurice insiste ou cite la loi.
+
+permanent_id:
+  type: blocking
+  labels:
+    en: Users can change their display name, but public user id is immutable.
+    fr: Les utilisateurices peuvent changer leur nom d'affichage, mais l'identifiant est public
+      et ne peut pas être changé.
+
+profile_comments:
+  type: blocking
+  labels:
+    en: Service has a comment or public message system between users, in which other may have used user's former name,
+      and those comments are linked to user profile.
+    fr: Le service a un système de commentaire ou de discussion publique entre les utilisateurices, dans lequel il
+      peut être fait mention de l'ancien nom, et ces commentaires sont liés au profil de l'utilisateurice.
+
+profile_comments.edited:
+  type: good
+  labels:
+    en: Service has a comment or public message system between users, in which other may have used user's former name,
+      and those comments are linked to user profile, but support accept to edit those comments.
+    fr: Le service a un système de commentaire ou de discussion publique entre les utilisateurices, dans lequel il
+      peut être fait mention de l'ancien nom, et ces commentaires sont liés au profil de l'utilisateurice,
+      mais le support accepte d'éditer ces commentaires.
+
+profile_comments.hard_to_find:
+  type: warning
+  labels:
+    en: Service has a comment or public message system between users, in which other may have used user's former name,
+      but those comments are hard to find if one does not know user's former name.
+    fr: Le service a un système de commentaire ou de discussion publique entre les utilisateurices, dans lequel il
+      peut être fait mention de l'ancien nom, mais ils sont difficiles à trouver sans connaître celui-ci.
+
