@@ -1,7 +1,7 @@
 import 'normalize.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
-import '../style.css'
+import '../components/globalStyle.css'
 
 
 

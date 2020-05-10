@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import {primaryColor} from './styleUtils';
+import {badColor, blockingColor, neutralColor, okColor, primaryColor, warningColor} from './styleUtils';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBan, faCheck, faExclamationTriangle, faInfoCircle, faTimes} from "@fortawesome/free-solid-svg-icons";
 
@@ -20,19 +20,18 @@ const Logo = styled.img`
 `
 
 const icons = {
-  "good": faCheck,
-  "information": faInfoCircle,
-  "warning": faExclamationTriangle,
-  "bad": faTimes,
-  "blocking": faBan,
+  "good": [faCheck, okColor],
+  "information": [faInfoCircle, neutralColor],
+  "warning": [faExclamationTriangle, warningColor],
+  "bad": [faTimes, badColor],
+  "blocking": [faBan, blockingColor],
 }
 
-const Tag = ({name, tagsData, className}) => {
-  let tag = tagsData[name] || null;
-  return ( tag &&
+const Tag = ({tag, className}) => {
+  return (
     <div className={className}>
-      <FontAwesomeIcon icon={icons[tag.type]} fixedWidth />
-      <p>{tagsData[name].labels.en}</p>
+      <FontAwesomeIcon icon={icons[tag.type][0]} fixedWidth color={icons[tag.type][1]} />
+      <p>{tag.labels.en}</p>
     </div>
   )
 }
@@ -41,15 +40,34 @@ const TagDisplay = styled(Tag)`
   display: flex;
   justify-content: left;
   align-items: center;
+  overflow: hidden;
+  margin-bottom: 17px;
   
   > * {
     margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 `;
 
+export const TagSet = ({company, tagSet}) => {
+  let tags = Object.entries(tagSet.tags).filter(([slug,]) => company.tags.includes(slug));
+
+  if (tags.length === 0) {
+    return null;
+  }
+
+  return (
+    <>
+      <h3>{tagSet.name}</h3>
+      {tags.map(([slug, tag]) => <TagDisplay key={slug} tag={tagSet.tags[slug]} />)}
+    </>
+  )
+};
+
 export const TagList = ({company, tagsData}) => (
   <>
-    {company.tags.map(tag => <TagDisplay key={tag} name={tag} tagsData={tagsData} />)}
+    {tagsData.map(tagSet => <TagSet key={tagSet.name} company={company} tagSet={tagSet} /> )}
   </>
 );
 
