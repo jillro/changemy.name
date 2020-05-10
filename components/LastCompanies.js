@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrandName, CompanyGraph, TagList} from "./Company";
-import {Card, Column, MasonryRow} from "./styleUtils";
+import {Card, Column, MasonryRow, Right} from "./styleUtils";
 import Link from "next/link";
 
 
@@ -13,8 +13,10 @@ const LastCompanies = ({companiesData, tagsData}) => (
             <Link href="/[company]" as={`/${slug}`}><a><BrandName>{company.name}</BrandName></a></Link>
             <CompanyGraph company={company} tagsData={tagsData} />
             <TagList company={company} tagsData={tagsData} />
-          </Card>
-          </Column>
+            <p>
+              <Right><Link href="/[company" as={`/${slug}`}><a>More details ></a></Link></Right>
+            </p>
+          </Card></Column>
       ))}
     </MasonryRow>
   </>
