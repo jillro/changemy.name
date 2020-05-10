@@ -1,4 +1,8 @@
 import styled from "styled-components";
+import {useRef} from "react";
+import {debounce} from "debounce";
+
+const {useEffect} = require("react");
 
 export const primaryColor = '#4054B2';
 export const lightBackgound = '#EBF6FB';
@@ -11,7 +15,7 @@ export const neutralColor = '#6C747C';
 export const okColor = '#2DA547';
 export const warningColor = '#FFC006';
 export const badColor = '#EF5C2F';
-export const blockingColor = '#DB3846';
+export const blockingColor = '#D01700';
 
 /**
  * Accessibility
@@ -63,9 +67,53 @@ export const Row = styled.div`
   margin-right: -${gutter};
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
+  align-items: ${({_noStretch}) => _noStretch ? "start" : "stretch"};
   height: 100%;
 `
+
+const _masonry = (element) => {
+  let columns = element.children;
+  let heights = [];
+  let translations = [0];
+  let wrapLength;
+
+  for (let i = 1, j = 1; i < columns.length; i++ && j++) {
+    let currentColumn = columns[i].getBoundingClientRect();
+    let prevColumn = columns[i-1].getBoundingClientRect();
+    heights[j-1] = prevColumn.height + translations[i-1];
+
+    if (currentColumn.top !== prevColumn.top) {
+      wrapLength = wrapLength || i;
+      j = j % wrapLength;
+    }
+
+    if (heights[j]) {
+      translations[i] = heights[j] - Math.max(...heights);
+    } else {
+      translations[i] = 0;
+    }
+  }
+
+  for (let i = 1; i < columns.length; i++) {
+    columns[i].style.transition = 'transform 0.1s';
+    columns[i].style.transform = `translateY(${translations[i]}px)`;
+  }
+}
+
+export const MasonryRow = (props) => {
+  const divEl = useRef(null);
+
+  useEffect(() => {
+    _masonry(divEl.current);
+    let eventListener = debounce(() => _masonry(divEl.current), 200);
+    window.addEventListener('resize', eventListener);
+    return () => {
+      window.removeEventListener('resize', eventListener);
+    }
+  });
+
+  return <Row _noStretch ref={divEl} {...props} />
+}
 
 export const Column = styled.div`
   ${({collapse}) => collapse && `

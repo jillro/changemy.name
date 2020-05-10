@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import {badColor, blockingColor, neutralColor, okColor, primaryColor, warningColor} from './styleUtils';
+import {badColor, blockingColor, Column, neutralColor, okColor, primaryColor, Row, warningColor} from './styleUtils';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBan, faCheck, faExclamationTriangle, faInfoCircle, faTimes} from "@fortawesome/free-solid-svg-icons";
 
@@ -19,12 +19,33 @@ const Logo = styled.img`
   display: block;
 `
 
+const TAG_TYPE_GOOD = "good"
+const TAG_TYPE_INFORMATION = "information"
+const TAG_TYPE_WARNING = "warning"
+const TAG_TYPE_BAD = "bad"
+const TAG_TYPE_BLOCKING = "blocking"
+
+const TAG_TYPES = [
+  TAG_TYPE_GOOD,
+  TAG_TYPE_INFORMATION,
+  TAG_TYPE_WARNING,
+  TAG_TYPE_BAD,
+  TAG_TYPE_BLOCKING
+]
+
+const COLORED_TAG_TYPES = [
+  TAG_TYPE_GOOD,
+  TAG_TYPE_WARNING,
+  TAG_TYPE_BAD,
+  TAG_TYPE_BLOCKING
+]
+
 const icons = {
-  "good": [faCheck, okColor],
-  "information": [faInfoCircle, neutralColor],
-  "warning": [faExclamationTriangle, warningColor],
-  "bad": [faTimes, badColor],
-  "blocking": [faBan, blockingColor],
+  [TAG_TYPE_GOOD]: [faCheck, okColor],
+  [TAG_TYPE_INFORMATION]: [faInfoCircle, neutralColor],
+  [TAG_TYPE_WARNING]: [faExclamationTriangle, warningColor],
+  [TAG_TYPE_BAD]: [faTimes, badColor],
+  [TAG_TYPE_BLOCKING]: [faBan, blockingColor],
 }
 
 const Tag = ({tag, className}) => {
@@ -71,11 +92,33 @@ export const TagList = ({company, tagsData}) => (
   </>
 );
 
+export const CompanyGraph = ({company, tagsData}) => {
+  let allTags = tagsData.map(tagSet => tagSet.tags).reduce((tags, setTags) => ({...tags, ...setTags}), {});
+  let companyColoredTagsC = company.tags.filter(tagSlug => COLORED_TAG_TYPES.includes(allTags[tagSlug].type)).length;
+  let shares = {}
+  for (let i = 0; i < COLORED_TAG_TYPES.length; i++) {
+    let type = COLORED_TAG_TYPES[i];
+    shares[type] = company.tags.filter(tagSlug => allTags[tagSlug].type === type).length / companyColoredTagsC;
+  }
+  return (
+    <Row style={{minHeight: '10px'}}>
+      {Object.entries(shares).filter(([color, share]) => share > 0).map(([color, share]) =>
+          <Column
+            key={color}
+            size={share}
+            style={{backgroundColor: icons[color][1]}}
+          />
+      )}
+    </Row>
+  )
+};
+
 const Company = ({company, tagsData}) => {
   return (
     <>
       {company.logo && <Logo src={`/logos/${company.slug}.${company.logo}`}/>}
       <BrandName>{company.name}</BrandName>
+      <CompanyGraph company={company} tagsData={tagsData} />
       <TagList company={company} tagsData={tagsData} />
     </>
   )
