@@ -21,3 +21,8 @@ scaleway:
     - support
     - bad_support
     - ask_for_papers
+
+skype:
+  name: Skype
+  tags:
+    - permanent_id
