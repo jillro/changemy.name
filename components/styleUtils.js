@@ -51,7 +51,6 @@ export const Right = styled.div`
  */
 
 export const Container = styled.main`
-  min-height: 100%;
   max-width: ${props => ({
     'window': '1600px',
     'wide': '1200px'

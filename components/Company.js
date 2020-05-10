@@ -101,7 +101,7 @@ export const CompanyGraph = ({company, tagsData}) => {
     shares[type] = company.tags.filter(tagSlug => allTags[tagSlug].type === type).length / companyColoredTagsC;
   }
   return (
-    <Row style={{minHeight: '10px'}}>
+    <Row style={{height: '10px'}}>
       {Object.entries(shares).filter(([color, share]) => share > 0).map(([color, share]) =>
           <Column
             key={color}
