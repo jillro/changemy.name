@@ -1,7 +1,9 @@
 import {Card, Column, Container, LightCardBoard, Row} from "../components/styleUtils";
 import Layout from "../components/Layout";
 import LastCompanies from "../components/LastCompanies";
-import {getData} from "../lib";
+import {getCompanies, getCompany, getTags} from "../lib";
+import React from "react";
+import {dataContext} from "./_app";
 
 
 function HeaderContent() {
@@ -44,17 +46,24 @@ function HeaderContent() {
 }
 
 export async function getStaticProps(context) {
-  return {props: getData()};
+  let companiesList = await getCompanies();
+  let tags = await getTags();
+
+  let homepageCompanies = await Promise.all(companiesList.slice(0, 10).map(({slug}) => getCompany(slug)));
+
+  return {props: {companiesList, tags, homepageCompanies}};
 }
 
-export default function Home({companies, tags}) {
+export default function Home({companiesList, tags, homepageCompanies}) {
   return (
-    <Layout headerContent={<HeaderContent />} companiesData={companies} tagsData={tags}>
-      <LightCardBoard>
-        <Container main size="wide">
-          <LastCompanies companiesData={companies} tagsData={tags}/>
-        </Container>
-      </LightCardBoard>
-    </Layout>
+    <dataContext.Provider value={{companiesList, tags}}>
+      <Layout headerContent={<HeaderContent />}>
+        <LightCardBoard>
+          <Container main size="wide">
+            <LastCompanies companiesData={homepageCompanies} />
+          </Container>
+        </LightCardBoard>
+      </Layout>
+    </dataContext.Provider>
   )
 }

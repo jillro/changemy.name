@@ -27,7 +27,7 @@ const ToolbarLogo = (props) => (
     </div>
 );
 
-export default function Layout({headerContent, companiesData, children}) {
+export default function Layout({headerContent, children}) {
   let router = useRouter();
 
   return (
@@ -40,7 +40,7 @@ export default function Layout({headerContent, companiesData, children}) {
               <Link href="/"><a><ToolbarLogo /></a></Link>
             </Column>}
             <Column>
-              <Search companiesData={companiesData} />
+              <Search />
             </Column>
           </Row>
         </Container>

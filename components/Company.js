@@ -1,9 +1,21 @@
-import React from "react";
+import React, {useContext} from "react";
 import styled from "styled-components";
 
-import {badColor, blockingColor, Column, neutralColor, okColor, primaryColor, Row, warningColor} from './styleUtils';
+import {
+  badColor,
+  blockingColor,
+  Column,
+  neutralColor,
+  okColor,
+  primaryColor,
+  Right,
+  Row,
+  Separator,
+  warningColor
+} from './styleUtils';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBan, faCheck, faExclamationTriangle, faInfoCircle, faTimes} from "@fortawesome/free-solid-svg-icons";
+import {dataContext} from "../pages/_app";
 
 export const BrandName = styled.h1`
   color: ${primaryColor};
@@ -86,14 +98,20 @@ export const TagSet = ({company, tagSet}) => {
   )
 };
 
-export const TagList = ({company, tagsData}) => (
-  <>
-    {tagsData.map(tagSet => <TagSet key={tagSet.name} company={company} tagSet={tagSet} /> )}
-  </>
-);
+export const TagList = ({company}) => {
+  let {tags} = useContext(dataContext);
+
+  return (
+    <>
+      {tags.map(tagSet => <TagSet key={tagSet.name} company={company} tagSet={tagSet}/>)}
+    </>
+  )
+};
 
 export const CompanyGraph = ({company, tagsData}) => {
-  let allTags = tagsData.map(tagSet => tagSet.tags).reduce((tags, setTags) => ({...tags, ...setTags}), {});
+  let {tags} = useContext(dataContext);
+
+  let allTags = tags.map(tagSet => tagSet.tags).reduce((tags, setTags) => ({...tags, ...setTags}), {});
   let companyColoredTagsC = company.tags.filter(tagSlug => COLORED_TAG_TYPES.includes(allTags[tagSlug].type)).length;
   let shares = {}
   for (let i = 0; i < COLORED_TAG_TYPES.length; i++) {
@@ -113,13 +131,16 @@ export const CompanyGraph = ({company, tagsData}) => {
   )
 };
 
-const Company = ({company, tagsData}) => {
+const Company = ({company}) => {
   return (
     <>
       {company.logo && <Logo src={`/logos/${company.slug}.${company.logo}`}/>}
       <BrandName>{company.name}</BrandName>
-      <CompanyGraph company={company} tagsData={tagsData} />
-      <TagList company={company} tagsData={tagsData} />
+      <CompanyGraph company={company} />
+      <TagList company={company} />
+      <Separator />
+      <div dangerouslySetInnerHTML={{__html: company.howTo }} />
+      {company.updated && <Right>Last update on {(new Date(company.updated)).toLocaleDateString('en-US')}</Right>}
     </>
   )
 }

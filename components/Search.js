@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import styled from "styled-components";
 
 import {primaryColor, SROnly} from './styleUtils';
@@ -6,6 +6,7 @@ import {faSearch} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Fuse from "fuse.js";
 import Link from "next/link";
+import {dataContext} from "../pages/_app";
 
 const ResultList = styled.ul`
   list-style: none;
@@ -61,9 +62,9 @@ const SearchInput = (props) => {
   )
 }
 
-const SearchResults = ({companies, query, resetSearch}) => {
-  let list = Object.entries(companies).map(([slug, c]) => ({slug, ...c}));
-  let fuse = new Fuse(list, {keys: ["name"], minMatchCharLength: 2});
+const SearchResults = ({query, resetSearch}) => {
+  let {companiesList} = useContext(dataContext);
+  let fuse = new Fuse(companiesList, {keys: ["name"], minMatchCharLength: 2});
   let results = fuse.search(query).map(c => c.item);
 
   return (
@@ -102,7 +103,7 @@ class Search extends React.Component {
           />
         </form>
         { this.state.query !== '' &&
-          <SearchResults companies={this.props.companiesData} query={this.state.query} resetSearch={() => this.setState({query: ''})}/>
+          <SearchResults query={this.state.query} resetSearch={() => this.setState({query: ''})}/>
         }
       </>
     )

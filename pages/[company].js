@@ -1,31 +1,36 @@
-import {getData} from "../lib";
+import {getCompanies, getCompany, getTags} from "../lib";
 import {Container} from "../components/styleUtils";
 import Layout from "../components/Layout";
 import Company from "../components/Company";
+import React from "react";
+import {dataContext} from "./_app";
 
 export async function getStaticPaths() {
   return {
-    paths: Object.keys(getData().companies).map(slug => ({params: {company: slug}})),
+    paths: (await getCompanies()).map(({slug}) => ({params: {company: slug}})),
     fallback: false
   }
 }
 
 export async function getStaticProps(context) {
-  let data = getData();
+  let tags = await getTags();
   return {
     props: {
-      company: {slug: context.params.company, ...data.companies[context.params.company]},
-      ...data
+      companiesList: await getCompanies(),
+      company: await getCompany(context.params.company),
+      tags
     }
   }
 }
 
-export default function CompanyPage({tags, companies, company}) {
+export default function CompanyPage({companiesList, tags, company}) {
   return (
-    <Layout tagsData={tags} companiesData={companies}>
-      <Container main>
-        <Company company={company} tagsData={tags}/>
-      </Container>
-    </Layout>
+    <dataContext.Provider value={{companiesList, tags}}>
+      <Layout>
+        <Container main>
+          <Company company={company} />
+        </Container>
+      </Layout>
+    </dataContext.Provider>
   )
 }

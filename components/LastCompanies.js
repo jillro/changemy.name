@@ -1,20 +1,20 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {BrandName, CompanyGraph, TagList} from "./Company";
 import {Card, Column, MasonryRow, Right} from "./styleUtils";
 import Link from "next/link";
 
 
-const LastCompanies = ({companiesData, tagsData}) => (
+const LastCompanies = ({companiesData}) => (
   <>
     <h1>Last companies</h1>
     <MasonryRow>
-      {Object.entries(companiesData).slice(0, 10).map(([slug, company]) => (
-          <Column key={slug} collapse="300"><Card>
-            <Link href="/[company]" as={`/${slug}`}><a><BrandName>{company.name}</BrandName></a></Link>
-            <CompanyGraph company={company} tagsData={tagsData} />
-            <TagList company={company} tagsData={tagsData} />
+      {companiesData.map(company => (
+          <Column key={company.slug} collapse="300"><Card>
+            <Link href="/[company]" as={`/${company.slug}`}><a><BrandName>{company.name}</BrandName></a></Link>
+            <CompanyGraph company={company} />
+            <TagList company={company} />
             <p>
-              <Right><Link href="/[company" as={`/${slug}`}><a>More details ></a></Link></Right>
+              <Right><Link href="/[company" as={`/${company.slug}`}><a>More details ></a></Link></Right>
             </p>
           </Card></Column>
       ))}

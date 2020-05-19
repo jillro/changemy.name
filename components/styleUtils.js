@@ -161,3 +161,11 @@ export const Card = styled.div`
   transition-property: box-shadow;
   transition-duration: .25s;
 `
+
+export const Separator = styled.hr`
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 50%;
+  max-width: 100px;
+  border: 1px solid ${lightTextColor};
+`;
