@@ -13,9 +13,9 @@ const LastCompanies = ({companiesData}) => (
             <Link href="/[company]" as={`/${company.slug}`}><a><BrandName>{company.name}</BrandName></a></Link>
             <CompanyGraph company={company} />
             <TagList company={company} />
-            <p>
-              <Right><Link href="/[company]" as={`/${company.slug}`}><a>More details ></a></Link></Right>
-            </p>
+            <Right><p>
+              <Link href="/[company]" as={`/${company.slug}`}><a>More details ></a></Link>
+            </p></Right>
           </Card></Column>
       ))}
     </MasonryRow>
