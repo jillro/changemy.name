@@ -14,7 +14,7 @@ const LastCompanies = ({companiesData}) => (
             <CompanyGraph company={company} />
             <TagList company={company} />
             <p>
-              <Right><Link href="/[company" as={`/${company.slug}`}><a>More details ></a></Link></Right>
+              <Right><Link href="/[company]" as={`/${company.slug}`}><a>More details ></a></Link></Right>
             </p>
           </Card></Column>
       ))}
