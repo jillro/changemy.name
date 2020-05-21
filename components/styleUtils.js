@@ -118,8 +118,8 @@ export const MasonryRow = (props) => {
 }
 
 export const Column = styled.div`
-  ${({collapse}) => collapse && `
-    @media(max-width: ${collapse}px) {
+  ${({collapse, size}) => collapse && `
+    @media(max-width: ${!size || typeof size === 'number' ? collapse / (size || 0.5) : collapse}px) {
       min-width: 100%;
     }
     min-width: ${collapse}px;
