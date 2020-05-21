@@ -12,7 +12,7 @@ export async function getMarkdownFile(filepath) {
   const matterResult = matter(fileContent);
   const content = (await remark().use(html).process(matterResult.content)).toString();
 
-  return {slug: filepath, content, ...matterResult.data}
+  return {content, ...matterResult.data}
 }
 
 export async function getTags() {
@@ -41,7 +41,7 @@ export async function getCompany(slug) {
     company.updated = company.updated.toString();
   }
 
-  return company;
+  return {slug, ...company};
 }
 
 export async function getAboutPages() {
