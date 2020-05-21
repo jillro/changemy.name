@@ -51,10 +51,11 @@ export const Right = styled.div`
  */
 
 export const Container = styled.main`
-  max-width: ${props => ({
+  width: ${props => ({
     'window': '1600px',
     'wide': '1200px'
   }[props.size] || '800px')};
+  max-width: 100%;
   margin: 0 auto;
   padding: ${gutter};
   border-radius: 3px;
@@ -124,8 +125,8 @@ export const Column = styled.div`
     min-width: ${collapse}px;
     `
   };
-  flex-basis: ${({size}) => size === 'fixed' ? 'auto' : (size || 0.5) * 100 + "%"};
-  flex-grow: ${({size}) => size === 'fixed' ? 0 : (size || 1)};
+  flex-basis: ${({size}) => ['fixed', 'fill'].includes(size) ? 'auto' : (size || 0.5) * 100 + "%"};
+  flex-grow: ${({size}) => size === 'fill' ? 1 : 0};
   padding-left: ${gutter};
   padding-right: ${gutter};
 `

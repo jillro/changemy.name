@@ -39,7 +39,7 @@ export default function Layout({headerContent, children}) {
             {router.pathname !== "/" && <Column size="fixed">
               <Link href="/"><a><ToolbarLogo /></a></Link>
             </Column>}
-            <Column>
+            <Column size="fill">
               <Search />
             </Column>
           </Row>
