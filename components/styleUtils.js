@@ -72,31 +72,31 @@ export const Row = styled.div`
 `
 
 const _masonry = (element) => {
-  let columns = element.children;
-  let heights = [];
-  let translations = [0];
-  let wrapLength;
+  let children = element.children; // actual elements we wanna place
+  let translations = [0]; // table of translations of each child
+  let heights = []; // list of heights for each children
+  let wrapLength; // detected number of columns on the grid
 
-  for (let i = 1, j = 1; i < columns.length; i++ && j++) {
-    let currentColumn = columns[i].getBoundingClientRect();
-    let prevColumn = columns[i-1].getBoundingClientRect();
-    heights[j-1] = prevColumn.height + translations[i-1];
+  for (let i = 1; i < children.length; i++) {
+    let prevChild = children[i-1].getBoundingClientRect();
+    let currentChild = children[i].getBoundingClientRect();
+    heights[i -1] = prevChild.height + translations[i - 1];
 
-    if (currentColumn.top !== prevColumn.top) {
-      wrapLength = wrapLength || i;
-      j = j % wrapLength;
-    }
-
-    if (heights[j]) {
-      translations[i] = heights[j] - Math.max(...heights);
-    } else {
+    if (!wrapLength && currentChild.top !== prevChild.top) {
+      wrapLength = i;
+    } else if (!wrapLength) {
       translations[i] = 0;
+      continue;
     }
+
+    let column = i % wrapLength;
+    let prevlineHeights = heights.slice(i - column - wrapLength, i - column);
+    translations[i] = prevlineHeights[column] - Math.max(...prevlineHeights);
   }
 
-  for (let i = 1; i < columns.length; i++) {
-    columns[i].style.transition = 'transform 0.1s';
-    columns[i].style.transform = `translateY(${translations[i]}px)`;
+  for (let i = 1; i < children.length; i++) {
+    children[i].style.transition = 'transform 0.1s';
+    children[i].style.transform = `translateY(${translations[i]}px)`;
   }
 }
 
