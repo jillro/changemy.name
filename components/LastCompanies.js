@@ -9,7 +9,7 @@ const LastCompanies = ({companiesData}) => (
     <h1>Last companies</h1>
     <MasonryRow>
       {companiesData.map(company => (
-          <Column key={company.slug} collapse="300"><Card>
+          <Column size={1/3} key={company.slug} collapse="300"><Card>
             <Link href="/[company]" as={`/${company.slug}`}><a><BrandName>{company.name}</BrandName></a></Link>
             <CompanyGraph company={company} />
             <TagList company={company} />
