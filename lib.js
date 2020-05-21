@@ -7,6 +7,14 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
+export async function getMarkdownFile(filepath) {
+  const fileContent = fs.readFileSync(filepath);
+  const matterResult = matter(fileContent);
+  const content = (await remark().use(html).process(matterResult.content)).toString();
+
+  return {slug: filepath, content, ...matterResult.data}
+}
+
 export async function getTags() {
   return YAML.parse(fs.readFileSync(path.join(process.cwd(), 'data', 'tags.yml')).toString());
 }
@@ -26,13 +34,23 @@ export async function getCompanies() {
 }
 
 export async function getCompany(slug) {
-  const fileContent = fs.readFileSync(path.join(process.cwd(), 'data', 'companies', `${slug}.md`));
-  const matterResult = matter(fileContent);
-  const howTo = (await remark().use(html).process(matterResult.content)).toString();
+  let company = await getMarkdownFile(path.join(process.cwd(), 'data', 'companies', `${slug}.md`))
+  company.howTo = company.content;
 
-  if (matterResult.data.updated) {
-    matterResult.data.updated = matterResult.data.updated.toString();
+  if (company.updated) {
+    company.updated = company.updated.toString();
   }
 
-  return {slug, howTo, ...matterResult.data}
+  return company;
+}
+
+export async function getAboutPages() {
+  return await Promise.all(
+    fs.readdirSync(path.join(process.cwd(), 'about'))
+      .map(fileName => fileName.replace(/\.md$/, ''))
+  );
+}
+
+export async function getAboutPage(slug) {
+  return await getMarkdownFile(path.join(process.cwd(), 'about', `${slug}.md`));
 }

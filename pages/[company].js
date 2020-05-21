@@ -13,12 +13,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  let tags = await getTags();
   return {
     props: {
       companiesList: await getCompanies(),
       company: await getCompany(context.params.company),
-      tags
+      tags: await getTags()
     }
   }
 }
