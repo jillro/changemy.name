@@ -49,7 +49,10 @@ export async function getStaticProps(context) {
   let companiesList = await getCompanies();
   let tags = await getTags();
 
-  let homepageCompanies = await Promise.all(companiesList.slice(0, 10).map(({slug}) => getCompany(slug)));
+  let homepageCompanies = (await Promise.all(companiesList.map(({slug}) => getCompany(slug))))
+    .sort((c1, c2) => {
+      return new Date(c2.updated) - new Date(c1.updated)
+    }).slice(0, 10);
 
   return {props: {companiesList, tags, homepageCompanies}};
 }
