@@ -1,3 +1,17 @@
+- name: Simplicity
+  labels:
+    fr: Simplicité
+  tags:
+    form.gender:
+      type: good
+      labels:
+        en: User can change gender through simple form.
+        fr: Il est possible de changer le genre par un simple formulaire.
+    form.name:
+      type: good
+      labels:
+        en: User can change first name through form.
+        fr: Il est possible de changer de prénom par un simple formulaire.
 - name: Support
   labels:
     fr: Assistance client / support technique
