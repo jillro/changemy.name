@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {BrandName, CompanyGraph, TagList} from "./Company";
 import {Card, Column, MasonryRow, Right} from "./styleUtils";
 import Link from "next/link";
