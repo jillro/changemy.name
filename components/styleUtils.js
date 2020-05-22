@@ -134,7 +134,6 @@ export const MasonryRow = (props) => {
   const divEl = useRef(null);
 
   useEffect(() => {
-    _masonry(divEl.current);
     let eventListener = debounce(() => _masonry(divEl.current), 200);
     window.addEventListener("resize", eventListener);
     window.addEventListener("load", eventListener);
