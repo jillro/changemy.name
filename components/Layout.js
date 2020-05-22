@@ -44,7 +44,7 @@ export default function Layout({
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
-          content="https://changemy.name/share_image.png?v=1"
+          content="https://changemy.name/share_image.png?v=2"
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
