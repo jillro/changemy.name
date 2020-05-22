@@ -91,7 +91,12 @@ export async function getStaticProps(context) {
 export default function Home({ companiesList, tags, homepageCompanies }) {
   return (
     <dataContext.Provider value={{ companiesList, tags }}>
-      <Layout headerContent={<HeaderContent />}>
+      <Layout
+        headerContent={<HeaderContent />}
+        title="changemy.name"
+        description="Changing public identity, names and gender, is one of the complicated tasks of gender transition.
+        How do companies handle this?"
+      >
         <LightCardBoard>
           <Container main size="wide">
             <LastCompanies companiesData={homepageCompanies} />

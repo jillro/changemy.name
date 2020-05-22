@@ -5,6 +5,7 @@ import { Bar, lightBackgound } from "./styleUtils";
 import Footer from "./Footer";
 import { Column, Container, Row } from "./styleUtils";
 import Search from "./Search";
+import Head from "next/head";
 
 const ToolbarLogo = (props) => (
   <div>
@@ -27,11 +28,21 @@ const ToolbarLogo = (props) => (
   </div>
 );
 
-export default function Layout({ headerContent, children }) {
+export default function Layout({
+  headerContent,
+  title,
+  description,
+  children,
+}) {
   let router = useRouter();
 
   return (
     <>
+      <Head>
+        {title && <title>{title} - changemy.name</title>}
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="/share_image.png" />
+      </Head>
       <Bar as="header">
         {headerContent}
         <Container as="div">

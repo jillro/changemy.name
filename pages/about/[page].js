@@ -24,7 +24,7 @@ export async function getStaticProps(context) {
 export default function CompanyPage({ companiesList, tags, page }) {
   return (
     <dataContext.Provider value={{ companiesList, tags }}>
-      <Layout>
+      <Layout title={page.title} description={page.description}>
         <Container main dangerouslySetInnerHTML={{ __html: page.content }} />
       </Layout>
     </dataContext.Provider>

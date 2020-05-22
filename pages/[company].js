@@ -27,7 +27,10 @@ export async function getStaticProps(context) {
 export default function CompanyPage({ companiesList, tags, company }) {
   return (
     <dataContext.Provider value={{ companiesList, tags }}>
-      <Layout>
+      <Layout
+        title={company.name}
+        description={`Lean how to change your name and gender with ${company.name}.`}
+      >
         <Container main>
           <Company company={company} />
         </Container>

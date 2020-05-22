@@ -1,3 +1,10 @@
+---
+title: How to contribute ❤
+description: |
+ Do you want to contribute to changemy.name and help
+ other trans people? 
+---
+
 # How to contribute ❤️
 
 Do you want to contribute? Anyone who experienced a name or gender
