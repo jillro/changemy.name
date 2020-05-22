@@ -23,5 +23,8 @@
     "remark-html": "^11.0.2",
     "styled-components": "^5.1.0",
     "yaml": "^1.10.0"
+  },
+  "devDependencies": {
+    "prettier": "2.0.5"
   }
 }
