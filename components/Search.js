@@ -56,7 +56,7 @@ const SearchInput = (props) => {
     <InputContainer>
       <FontAwesomeIcon icon={faSearch} />
       <SROnly>Search </SROnly>
-      <TextInput {...props} />
+      <TextInput {...props} size="1" />
     </InputContainer>
   );
 };
