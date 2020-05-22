@@ -10,9 +10,11 @@ const Footer = () => (
       Made by <a href="https://jillroyer.me">Jill</a> on her spare time, with
       help of <a href="https://wikitrans.co/">Wikitrans</a> team
       <Separator />
+      <a href="https://github.com/jillro/changemy.name">GitHub project</a>
+      <Separator />
       <Link href="/about/[page]" as="/about/new-company">
-        <a>How to contribute</a>
-      </Link>
+        <a>How to contribute ❤</a>
+      </Link>{" "}
     </Center>
   </Bar>
 );
