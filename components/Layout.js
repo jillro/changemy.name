@@ -39,7 +39,7 @@ export default function Layout({
   return (
     <>
       <Head>
-        {title && <title>{title} - changemy.name</title>}
+        <title>{title ? `${title} - changemy.name` : "changemy.name"}</title>
         <meta property="og:title" content={title || "changemy.name"} />
         <meta property="og:description" content={description} />
         <meta
