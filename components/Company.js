@@ -11,6 +11,7 @@ import {
   Right,
   Row,
   Separator,
+  SROnly,
   warningColor,
 } from "./styleUtils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -32,8 +33,7 @@ const Logo = styled.img`
   max-width: 300px;
   height: auto;
   max-height: 150px;
-  margin: auto;
-  margin-top: 20px;
+  margin: 30px auto;
   display: block;
 `;
 
@@ -158,8 +158,19 @@ export const CompanyGraph = ({ company, tagsData }) => {
 const Company = ({ company }) => {
   return (
     <>
-      {company.logo && <Logo src={`/logos/${company.slug}.${company.logo}`} />}
-      <BrandName>{company.name}</BrandName>
+      {company.logo && (
+        <Logo
+          src={`/logos/${company.slug}.${company.logo}`}
+          alt={`${company.name} logo`}
+        />
+      )}
+      {company.name_in_logo ? (
+        <SROnly>
+          <BrandName>{company.name}</BrandName>
+        </SROnly>
+      ) : (
+        <BrandName>{company.name}</BrandName>
+      )}
       <CompanyGraph company={company} />
       <TagList company={company} />
       <Separator />

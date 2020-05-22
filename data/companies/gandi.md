@@ -1,6 +1,7 @@
 ---
 name: Gandi
 logo: svg
+name_in_logo: yes
 tags:
 - support.ok
 - ask_for_papers.ok
