@@ -8,7 +8,7 @@ const Footer = () => (
   <Bar as="footer">
     <Center>
       Made by <a href="https://jillroyer.me">Jill</a> on her spare time, with
-      help of <a href="https://wikitrans.co/">Wikitrans</a> team
+      help of <a href="https://wikitrans.co/">Wiki Trans</a> team
       <Separator />
       <a href="https://github.com/jillro/changemy.name">GitHub project</a>
       <Separator />
