@@ -40,6 +40,7 @@ export default function Layout({
     <>
       <Head>
         {title && <title>{title} - changemy.name</title>}
+        <meta property="og:title" content={title || "changemy.name"} />
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
