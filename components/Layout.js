@@ -41,7 +41,11 @@ export default function Layout({
       <Head>
         {title && <title>{title} - changemy.name</title>}
         <meta property="og:description" content={description} />
-        <meta property="og:image" content="/share_image.png" />
+        <meta
+          property="og:image"
+          content="https://changemy.name/share_image.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Bar as="header">
         {headerContent}
