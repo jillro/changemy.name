@@ -100,7 +100,7 @@ const _masonry = (element) => {
 
     if (!wrapLength) {
       colHeights[i - 1] = prevChild.top + prevChild.height;
-      if (currentChild.top !== prevChild.top) {
+      if (Math.abs(currentChild.top - prevChild.top) > 1) {
         wrapLength = i;
       } else {
         translations[i] = { X: 0, Y: 0 };
