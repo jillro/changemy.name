@@ -73,30 +73,45 @@ export const Row = styled.div`
 
 const _masonry = (element) => {
   let children = element.children; // actual elements we wanna place
-  let translations = [0]; // table of translations of each child
-  let heights = []; // list of heights for each children
-  let wrapLength; // detected number of columns on the grid
+  let translations = [{X: 0, Y: 0}]; // table of translations of each child
 
-  for (let i = 1; i < children.length; i++) {
-    let prevChild = children[i-1].getBoundingClientRect();
-    let currentChild = children[i].getBoundingClientRect();
-    heights[i -1] = prevChild.height + translations[i - 1];
+  let firstChild = children[0].getBoundingClientRect();
+  let secondChild = children[1].getBoundingClientRect();
+  let lineTop = firstChild.top;
+  let childWidth = secondChild.left - firstChild.left;
 
-    if (!wrapLength && currentChild.top !== prevChild.top) {
-      wrapLength = i;
-    } else if (!wrapLength) {
-      translations[i] = 0;
-      continue;
+  if (childWidth === 0) {
+    translations = (new Array(children.length)).fill({X: 0, Y: 0}, 0, children.length + 1);
+  }
+
+  let currentChild, prevChild, wrapLength, colHeights = [], childHeights = [];
+  for (let i = 1; childWidth > 0 && i < children.length; i++) {
+    prevChild = currentChild || firstChild;
+    currentChild = i > 1 ? children[i].getBoundingClientRect(): secondChild;
+    childHeights[i -1] = prevChild.height;
+
+    if (!wrapLength) {
+      colHeights[i -1] = prevChild.top + prevChild.height;
+      if (currentChild.top !== prevChild.top) {
+        wrapLength = i;
+      } else {
+        translations[i] = {X: 0, Y: 0};
+        continue;
+      }
     }
 
     let column = i % wrapLength;
-    let prevlineHeights = heights.slice(i - column - wrapLength, i - column);
-    translations[i] = prevlineHeights[column] - Math.max(...prevlineHeights);
+    if (column === 0) {
+      lineTop += Math.max(...childHeights.slice(i - column - wrapLength, i - column));
+    }
+    let newColumn = colHeights.indexOf(Math.min(...colHeights));
+    translations[i] = {X: (newColumn - column) * childWidth, Y: colHeights[newColumn] - lineTop};
+    colHeights[newColumn] += currentChild.height;
   }
 
   for (let i = 1; i < children.length; i++) {
     children[i].style.transition = 'transform 0.1s';
-    children[i].style.transform = `translateY(${translations[i]}px)`;
+    children[i].style.transform = `translate(${translations[i]['X']}px, ${translations[i]['Y']}px)`;
   }
 }
 
@@ -107,10 +122,8 @@ export const MasonryRow = (props) => {
     _masonry(divEl.current);
     let eventListener = debounce(() => _masonry(divEl.current), 200);
     window.addEventListener('resize', eventListener);
-    window.addEventListener('load', eventListener);
     return () => {
       window.removeEventListener('resize', eventListener);
-      window.removeEventListener('load', eventListener);
     }
   });
 
