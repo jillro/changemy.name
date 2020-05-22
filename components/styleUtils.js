@@ -137,8 +137,10 @@ export const MasonryRow = (props) => {
     _masonry(divEl.current);
     let eventListener = debounce(() => _masonry(divEl.current), 200);
     window.addEventListener("resize", eventListener);
+    window.addEventListener("load", eventListener);
     return () => {
       window.removeEventListener("resize", eventListener);
+      window.removeEventListener("load", eventListener);
     };
   });
 
