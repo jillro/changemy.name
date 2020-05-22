@@ -19,6 +19,7 @@ the following content:
 >
 > **Name changing process**
 > 
+> * When did you try to change your name?
 > * Is there any form where you can change your name, gender, or both?
 > * If not, when you contacted support did they misgendered you although
 >they had correct information on your gender?
@@ -35,4 +36,9 @@ the following content:
 > **Public identity and privacy**
 > * Is there a public user id you cannot change without a new account?
 > * Are there public comments where you name can appear and which you
->cannot edit or delete? Are they easy to find for other users? 
+>cannot edit or delete? Are they easy to find for other users?
+>
+> **Your contribution**
+> * Do you want to be credited? If yes, please indicate:
+>   * Name or pseudonyme
+>   * an optional URL (personal website, public Twitter account...)
