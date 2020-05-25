@@ -23,6 +23,7 @@ import {
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 import { dataContext } from "../pages/_app";
+import Link from "next/link";
 
 export const BrandName = styled.h1`
   color: ${primaryColor};
@@ -177,7 +178,15 @@ const Company = ({ company }) => {
       <div dangerouslySetInnerHTML={{ __html: company.howTo }} />
       {company.updated && (
         <Right>
-          Last update on {new Date(company.updated).toLocaleDateString("en-US")}
+          <p>
+            Last update on{" "}
+            {new Date(company.updated).toLocaleDateString("en-US")}
+          </p>
+          <p>
+            <Link href="/about/[page]" as="/about/how">
+              <a>Any error?</a>
+            </Link>
+          </p>
         </Right>
       )}
     </>
