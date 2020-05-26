@@ -1,5 +1,5 @@
 import React from "react";
-import { BrandName, CompanyGraph, TagList } from "./Company";
+import { BrandName, CompanyGraph, FlagList, TagList } from "./Company";
 import { Card, Column, MasonryRow, Right } from "./styleUtils";
 import Link from "next/link";
 
@@ -10,6 +10,7 @@ const LastCompanies = ({ companiesData }) => (
       {companiesData.map((company) => (
         <Column size={1 / 3} key={company.slug} collapse="300">
           <Card>
+            {company.countries && <FlagList countries={company.countries} />}
             <Link href="/[company]" as={`/${company.slug}`}>
               <a>
                 <BrandName>{company.name}</BrandName>

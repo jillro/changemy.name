@@ -156,9 +156,28 @@ export const CompanyGraph = ({ company, tagsData }) => {
   );
 };
 
+const Flag = styled.img`
+  height: 16px;
+  float: right;
+`;
+
+export const FlagList = ({ countries }) => (
+  <Right style={{ marginTop: "10px" }}>
+    {countries.map((country) => (
+      <Flag
+        alt={`${country} flag`}
+        src={`/flags/${country}.svg`}
+        key={country}
+        title={country}
+      />
+    ))}
+  </Right>
+);
+
 const Company = ({ company }) => {
   return (
     <>
+      {company.countries && <FlagList countries={company.countries} />}
       {company.logo && (
         <Logo
           src={`/logos/${company.slug}.${company.logo}`}
