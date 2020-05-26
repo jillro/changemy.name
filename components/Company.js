@@ -159,6 +159,7 @@ export const CompanyGraph = ({ company, tagsData }) => {
 const Flag = styled.img`
   height: 16px;
   float: right;
+  border-radius: 2px;
 `;
 
 export const FlagList = ({ countries }) => (
