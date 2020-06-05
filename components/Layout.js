@@ -46,6 +46,8 @@ export default function Layout({
   let router = useRouter();
   let { lang } = useContext(dataContext);
 
+  let notIndex = !["/", "/[lang]"].includes(router.pathname);
+
   return (
     <>
       <Head>
@@ -60,14 +62,14 @@ export default function Layout({
       </Head>
       <Bar as="header">
         {headerContent}
-        {router.pathname !== "/[lang]" && (
+        {notIndex && (
           <PullRight>
             <LanguageSwitcher light />
           </PullRight>
         )}
         <Container as="div">
           <Row>
-            {router.pathname !== "/[lang]" && (
+            {notIndex && (
               <Column size="fixed">
                 <Link href="/[lang]" as={`/${lang}`}>
                   <a>

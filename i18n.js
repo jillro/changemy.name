@@ -9,7 +9,6 @@ export function loadI18n(lang, strings) {
       },
     },
     lng: lang,
-    fallbackLng: "en",
   });
 }
 
