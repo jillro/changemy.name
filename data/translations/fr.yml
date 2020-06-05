@@ -1,0 +1,14 @@
+language: Français
+last_update: Dernière mise à jour le {{date}}
+report_error: Une erreur ?
+search_placeholder: Rechercher une entreprise...
+search_results: "{{count}} résultat"
+search_results_plural: "{{count}} résultats"
+more_details: Plus de détails
+last_companies_heading: Derniers ajouts
+about_github: Projet GitHub
+about_contributors: Contributeurs
+about_how_does_this_work: Comment ça marche ?
+about_how_to_contribute: Comment contribuer ❤
+made_by: Un site fait par {{- jill_link}} sur son temps libre, avec l'aide de l'équipe du {{- wikitrans_link}}
+no_translation: Désolé, cette page n'est pas disponible dans votre langue.

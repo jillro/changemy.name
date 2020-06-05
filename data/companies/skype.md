@@ -4,6 +4,7 @@ tags:
 - permanent_id
 logo: svg
 updated: 2020-05-19
+defaultLang: en
 ---
 Skype ID cannot be changed, and is often asked by other users.
 

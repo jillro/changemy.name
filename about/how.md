@@ -1,17 +1,17 @@
 ---
 title: How does this work?
 description: |
- How is organized data on changemy.name 
+ What does data on changemy.name mean? 
 ---
 
 # How does this work?
 
 For each company, we attribute a number of tags based on experiences
-of trans users trying to change their names.
+of trans users trying to update their names or gender.
 
-Tags are sorted in categories, depending on how they represent
-difficulties or helps for the name changing process. One of these
-categories is "Blocking". If a company has a tag in this category,
+Tags are sorted in categories, and depending on the level of
+difficulty or help they create for the name changing process. One of these
+level is "Blocking". If a company has a "Blocking" tag,
 we do not list other tags, as they would be non significant as long
 as there is a blocking problem.
 

@@ -1,0 +1,14 @@
+language: English
+last_update: Last update on {{date}}
+report_error: Any error?
+search_placeholder: Search company name...
+search_results: "{{count}} result"
+search_results_plural: "{{count}} results"
+more_details: More details
+last_companies_heading: Last companies
+about_github: GitHub Project
+about_contributors: Contributors
+about_how_does_this_work: How does this work?
+about_how_to_contribute: How to contribute ❤
+made_by: Made by {{- jill_link}} on her spare time, with help of {{- wikitrans_link}} team
+no_translation: Sorry, this page is not available in your language.

@@ -8,6 +8,7 @@ logo: svg
 name_in_logo: yes
 countries:
  - fr
+defaultLang: fr
 ---
-You can change your name and gender on the
-[settings form](https://www.leboncoin.fr/compte/edit/).
+Vous pouvez changer votre prénom et votre genre dans
+[les paramètres](https://www.leboncoin.fr/compte/edit/).

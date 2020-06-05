@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
 
 import { primaryColor, SROnly } from "./styleUtils";
@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Fuse from "fuse.js";
 import Link from "next/link";
 import { dataContext } from "../pages/_app";
+import { useTranslation } from "react-i18next";
 
 const ResultList = styled.ul`
   list-style: none;
@@ -62,13 +63,16 @@ const SearchInput = (props) => {
 };
 
 const SearchResults = ({ query, resetSearch }) => {
+  const { t } = useTranslation();
   let { companiesList } = useContext(dataContext);
   let fuse = new Fuse(companiesList, { keys: ["name"], minMatchCharLength: 2 });
   let results = fuse.search(query).map((c) => c.item);
 
   return (
     <ResultList>
-      <li key="resultCount">{results.length} results</li>
+      <li key="resultCount">
+        {t("search_results", { count: results.length })}
+      </li>
       {results.map((c) => (
         <li key={c.slug}>
           <Link href="[company]" as={`/${c.slug}`}>
@@ -80,38 +84,25 @@ const SearchResults = ({ query, resetSearch }) => {
   );
 };
 
-class Search extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      query: "",
-    };
-  }
+const Search = () => {
+  const [query, setQuery] = useState("");
+  const { t } = useTranslation();
 
-  queryChange = (e) => {
-    this.setState({ query: e.target.value });
-  };
-
-  render() {
-    return (
-      <>
-        <form onSubmit={(e) => e.preventDefault()}>
-          <SearchInput
-            type="text"
-            placeholder="Search company name..."
-            value={this.state.query}
-            onChange={this.queryChange}
-          />
-        </form>
-        {this.state.query !== "" && (
-          <SearchResults
-            query={this.state.query}
-            resetSearch={() => this.setState({ query: "" })}
-          />
-        )}
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <form onSubmit={(e) => e.preventDefault()}>
+        <SearchInput
+          type="text"
+          placeholder={t("search_placeholder")}
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+      </form>
+      {query !== "" && (
+        <SearchResults query={query} resetSearch={() => setQuery("")} />
+      )}
+    </>
+  );
+};
 
 export default Search;

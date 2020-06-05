@@ -4,10 +4,13 @@ import styled from "styled-components";
 import {
   badColor,
   blockingColor,
+  BlueWarning,
   Column,
+  Container,
   neutralColor,
   okColor,
   primaryColor,
+  PullRight,
   Right,
   Row,
   Separator,
@@ -24,6 +27,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { dataContext } from "../pages/_app";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export const BrandName = styled.h1`
   color: ${primaryColor};
@@ -68,6 +72,7 @@ const icons = {
 };
 
 const Tag = ({ tag, className }) => {
+  const { lang } = useContext(dataContext);
   return (
     <div className={className}>
       <FontAwesomeIcon
@@ -75,7 +80,7 @@ const Tag = ({ tag, className }) => {
         fixedWidth
         color={icons[tag.type][1]}
       />
-      <p>{tag.labels.en}</p>
+      <p>{tag.labels[lang]}</p>
     </div>
   );
 };
@@ -95,6 +100,7 @@ const TagDisplay = styled(Tag)`
 `;
 
 export const TagSet = ({ company, tagSet }) => {
+  const { lang } = useContext(dataContext);
   let tags = Object.entries(tagSet.tags).filter(([slug]) =>
     company.tags.includes(slug)
   );
@@ -105,7 +111,7 @@ export const TagSet = ({ company, tagSet }) => {
 
   return (
     <>
-      <h3>{tagSet.name}</h3>
+      <h3>{tagSet.labels[lang]}</h3>
       {tags.map(([slug, tag]) => (
         <TagDisplay key={slug} tag={tagSet.tags[slug]} />
       ))}
@@ -158,12 +164,11 @@ export const CompanyGraph = ({ company, tagsData }) => {
 
 const Flag = styled.img`
   height: 16px;
-  float: right;
   border-radius: 2px;
 `;
 
 export const FlagList = ({ countries }) => (
-  <Right style={{ marginTop: "10px" }}>
+  <PullRight style={{ marginTop: "-26px" }}>
     {countries.map((country) => (
       <Flag
         alt={`${country} flag`}
@@ -172,13 +177,14 @@ export const FlagList = ({ countries }) => (
         title={country}
       />
     ))}
-  </Right>
+  </PullRight>
 );
 
 const Company = ({ company }) => {
+  const { t } = useTranslation();
+  const { lang } = useContext(dataContext);
   return (
     <>
-      {company.countries && <FlagList countries={company.countries} />}
       {company.logo && (
         <Logo
           src={`/logos/${company.slug}.${company.logo}`}
@@ -192,19 +198,35 @@ const Company = ({ company }) => {
       ) : (
         <BrandName>{company.name}</BrandName>
       )}
+
+      {company.countries && <FlagList countries={company.countries} />}
       <CompanyGraph company={company} />
       <TagList company={company} />
       <Separator />
-      <div dangerouslySetInnerHTML={{ __html: company.howTo }} />
+      {company.content && (
+        <>
+          {company.noTranslation && (
+            <Container>
+              <BlueWarning>{t("no_translation")}</BlueWarning>
+            </Container>
+          )}
+          <div dangerouslySetInnerHTML={{ __html: company.content }} />
+        </>
+      )}
       {company.updated && (
         <Right>
           <p>
-            Last update on{" "}
-            {new Date(company.updated).toLocaleDateString("en-US")}
+            {t("last_update", {
+              date: new Date(company.updated).toLocaleDateString(lang, {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              }),
+            })}
           </p>
           <p>
             <Link href="/about/[page]" as="/about/how">
-              <a>Any error?</a>
+              <a>{t("report_error")}</a>
             </Link>
           </p>
         </Right>

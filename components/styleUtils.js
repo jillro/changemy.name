@@ -45,6 +45,10 @@ export const Right = styled.div`
   text-align: right;
 `;
 
+export const PullRight = styled.div`
+  float: right;
+`;
+
 /**
  * Grid
  */
@@ -197,6 +201,15 @@ export const Card = styled.div`
 
   transition-property: box-shadow;
   transition-duration: 0.25s;
+`;
+
+export const BlueWarning = styled.div`
+  margin-left: -${gutter};
+  margin-right: -${gutter};
+  border-radius: 3px;
+  padding: ${gutter};
+  background-color: #f0f0ff;
+  margin-top: 10px;
 `;
 
 export const Separator = styled.hr`

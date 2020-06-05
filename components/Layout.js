@@ -1,11 +1,20 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { Bar, lightBackgound } from "./styleUtils";
+import {
+  Bar,
+  Column,
+  Container,
+  lightBackgound,
+  PullRight,
+  Row,
+} from "./styleUtils";
 import Footer from "./Footer";
-import { Column, Container, Row } from "./styleUtils";
 import Search from "./Search";
 import Head from "next/head";
+import { dataContext } from "../pages/_app";
+import React, { useContext } from "react";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const ToolbarLogo = (props) => (
   <div>
@@ -35,6 +44,7 @@ export default function Layout({
   children,
 }) {
   let router = useRouter();
+  let { lang } = useContext(dataContext);
 
   return (
     <>
@@ -50,11 +60,16 @@ export default function Layout({
       </Head>
       <Bar as="header">
         {headerContent}
+        {router.pathname !== "/[lang]" && (
+          <PullRight>
+            <LanguageSwitcher light />
+          </PullRight>
+        )}
         <Container as="div">
           <Row>
-            {router.pathname !== "/" && (
+            {router.pathname !== "/[lang]" && (
               <Column size="fixed">
-                <Link href="/">
+                <Link href="/[lang]" as={`/${lang}`}>
                   <a>
                     <ToolbarLogo />
                   </a>

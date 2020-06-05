@@ -8,13 +8,13 @@ tags:
 - good_support
 - new_account_before_insist
 updated: 2020-02-26
+defaultLang: en
 ---
 
-You need to contact [Gandi support](https://help.gandi.net/contact) in order to change your name.
+You need to contact [Gandi support](https://help.gandi.net/contact).
 
-User reported support first instruction was to create a new account, but agreed
-to transfer case to legal department after further explanations. Legal
-department helpful. 
+If support first instruction is to create a new account, insist to
+to transfer case to legal department.
 
 Gandi ask for papers and legal proof, but this is a constraint imposed by
 domain registers.
