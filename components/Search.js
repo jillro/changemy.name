@@ -64,7 +64,7 @@ const SearchInput = (props) => {
 
 const SearchResults = ({ query, resetSearch }) => {
   const { t } = useTranslation();
-  let { companiesList } = useContext(dataContext);
+  let { companiesList, lang } = useContext(dataContext);
   let fuse = new Fuse(companiesList, { keys: ["name"], minMatchCharLength: 2 });
   let results = fuse.search(query).map((c) => c.item);
 
@@ -75,7 +75,7 @@ const SearchResults = ({ query, resetSearch }) => {
       </li>
       {results.map((c) => (
         <li key={c.slug}>
-          <Link href="[company]" as={`/${c.slug}`}>
+          <Link href="/[lang]/[company]" as={`/${lang}/${c.slug}`}>
             <a onClick={resetSearch}>{c.name}</a>
           </Link>
         </li>
