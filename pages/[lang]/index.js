@@ -31,11 +31,16 @@ function HeaderContent({ text }) {
             <img src="/logo.svg" align="left" alt=".name" />
             <style jsx>{`
               img {
-                height: 200px;
+                width: 185px;
                 margin-top: 30px;
                 margin-right: 30px;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
                 display: inline;
+              }
+              @media (max-width: 400px) {
+                img {
+                  width: 100%;
+                }
               }
             `}</style>
             <div dangerouslySetInnerHTML={{ __html: text }} />
