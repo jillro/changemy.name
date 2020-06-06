@@ -89,11 +89,13 @@ export default function Layout({
         </Container>
       </Bar>
       <Container>
-        <Hide over="530">
-          <Right>
-            <LanguageSwitcher />
-          </Right>
-        </Hide>
+        {notIndex && (
+          <Hide over="530">
+            <Right>
+              <LanguageSwitcher />
+            </Right>
+          </Hide>
+        )}
       </Container>
       {children}
       <Footer />
