@@ -7,21 +7,19 @@ export const LanguageSwitcher = ({ light }) => {
   const router = useRouter();
 
   return (
-    <select defaultValue={lang}>
-      {Object.entries(langs).map(([code, name]) => {
+    <select
+      defaultValue={lang}
+      onChange={(e) => {
         let languageUrl = router.asPath.replace(
           /^\/[^\/]*(\/.*)?$/,
-          `/${code}$1`
+          `/${e.target.value}$1`
         );
+        router.push(languageUrl);
+      }}
+    >
+      {Object.entries(langs).map(([code, name]) => {
         return (
-          <option
-            key={code}
-            value={code}
-            onClick={(e) => {
-              e.preventDefault();
-              router.push(languageUrl);
-            }}
-          >
+          <option key={code} value={code}>
             {name}
           </option>
         );
