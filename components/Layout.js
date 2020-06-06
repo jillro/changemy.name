@@ -60,27 +60,31 @@ export default function Layout({
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Bar as="header">
+      <Bar as="header" style={{ marginBottom: "15px" }}>
         {headerContent}
-        {notIndex && (
-          <PullRight>
-            <LanguageSwitcher light />
-          </PullRight>
-        )}
-        <Container as="div">
-          <Row>
+        <Container as="div" style={{ marginTop: "15px", marginBottom: "15px" }}>
+          <Row align="center" justify="flex-end">
+            <Column size="fill" collapse="300">
+              <Row>
+                {notIndex && (
+                  <Column size="fixed">
+                    <Link href="/[lang]" as={`/${lang}`}>
+                      <a>
+                        <ToolbarLogo />
+                      </a>
+                    </Link>
+                  </Column>
+                )}
+                <Column size="fill">
+                  <Search />
+                </Column>
+              </Row>
+            </Column>
             {notIndex && (
               <Column size="fixed">
-                <Link href="/[lang]" as={`/${lang}`}>
-                  <a>
-                    <ToolbarLogo />
-                  </a>
-                </Link>
+                <LanguageSwitcher light />
               </Column>
             )}
-            <Column size="fill">
-              <Search />
-            </Column>
           </Row>
         </Container>
       </Bar>

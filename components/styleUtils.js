@@ -61,7 +61,8 @@ export const Container = styled.main`
     }[props.size] || "800px")};
   max-width: 100%;
   margin: 0 auto;
-  padding: ${gutter};
+  padding-left: ${gutter};
+  padding-right: ${gutter};
   border-radius: 3px;
   flex-grow: ${(props) => (props.main ? 1 : 0)};
 `;
@@ -71,7 +72,8 @@ export const Row = styled.div`
   margin-right: -${gutter};
   display: flex;
   flex-wrap: wrap;
-  align-items: ${({ _noStretch }) => (_noStretch ? "start" : "stretch")};
+  align-items: ${({ align }) => align || "stretch"};
+  justify-content: ${({ justify }) => justify || "start"};
   height: 100%;
 `;
 
@@ -150,7 +152,7 @@ export const MasonryRow = (props) => {
     };
   });
 
-  return <Row _noStretch ref={divEl} {...props} />;
+  return <Row align="start" ref={divEl} {...props} />;
 };
 
 export const Column = styled.div`
