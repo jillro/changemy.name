@@ -12,8 +12,12 @@ export function loadI18n(lang, strings) {
   });
 }
 
-export function localizePaths(paths) {
+export function localizeStaticPaths(paths) {
   return ["fr", "en"].flatMap((lang) =>
     paths.map(({ params }) => ({ params: { lang, ...params } }))
   );
+}
+
+export function localizePath(path, lang) {
+  return path.replace(/^\/[^\/]*(\/.*)?$/, `/${lang}$1`);
 }

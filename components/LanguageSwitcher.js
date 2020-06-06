@@ -1,6 +1,7 @@
 import { dataContext } from "../pages/_app";
 import { useContext } from "react";
 import { useRouter } from "next/router";
+import { localizePath } from "../i18n";
 
 export const LanguageSwitcher = ({ light }) => {
   const { lang, langs } = useContext(dataContext);
@@ -10,11 +11,7 @@ export const LanguageSwitcher = ({ light }) => {
     <select
       defaultValue={lang}
       onChange={(e) => {
-        let languageUrl = router.asPath.replace(
-          /^\/[^\/]*(\/.*)?$/,
-          `/${e.target.value}$1`
-        );
-        router.push(languageUrl);
+        router.push(localizePath(router.asPath, e.target.value));
       }}
     >
       {Object.entries(langs).map(([code, name]) => {

@@ -17,6 +17,7 @@ import Head from "next/head";
 import { dataContext } from "../pages/_app";
 import React, { useContext } from "react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { localizePath } from "../i18n";
 
 const ToolbarLogo = (props) => (
   <div>
@@ -46,7 +47,7 @@ export default function Layout({
   children,
 }) {
   let router = useRouter();
-  let { lang } = useContext(dataContext);
+  let { lang, langs } = useContext(dataContext);
 
   let notIndex = !["/", "/[lang]"].includes(router.pathname);
 
@@ -61,6 +62,13 @@ export default function Layout({
           content="https://changemy.name/share_image.png?v=2"
         />
         <meta name="twitter:card" content="summary_large_image" />
+        {Object.keys(langs).map((code) => (
+          <link
+            rel="alternate"
+            hrefLang={code}
+            href={`https://changemy.name/${localizePath(router.asPath, code)}`}
+          />
+        ))}
       </Head>
       <Bar as="header">
         {headerContent}

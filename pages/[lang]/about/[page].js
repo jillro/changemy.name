@@ -2,12 +2,12 @@ import { getAboutPage, getAboutPages, getCommonProps } from "../../../lib";
 import Layout from "../../../components/Layout";
 import React from "react";
 import { BlueWarning, Container } from "../../../components/styleUtils";
-import { localizePaths } from "../../../i18n";
+import { localizeStaticPaths } from "../../../i18n";
 import { useTranslation } from "react-i18next";
 
 export async function getStaticPaths() {
   return {
-    paths: localizePaths(
+    paths: localizeStaticPaths(
       (await getAboutPages()).map((slug) => ({ params: { page: slug } }))
     ),
     fallback: false,

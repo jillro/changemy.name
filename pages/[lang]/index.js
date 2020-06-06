@@ -16,7 +16,7 @@ import {
   getTags,
 } from "../../lib";
 import React from "react";
-import { localizePaths } from "../../i18n";
+import { localizeStaticPaths } from "../../i18n";
 import { LanguageSwitcher } from "../../components/LanguageSwitcher";
 
 function HeaderContent({ text }) {
@@ -65,7 +65,7 @@ function HeaderContent({ text }) {
 
 export async function getStaticPaths() {
   return {
-    paths: localizePaths([{ params: {} }]),
+    paths: localizeStaticPaths([{ params: {} }]),
     fallback: false,
   };
 }

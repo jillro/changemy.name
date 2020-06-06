@@ -3,11 +3,11 @@ import { Container } from "../../components/styleUtils";
 import Layout from "../../components/Layout";
 import Company from "../../components/Company";
 import React from "react";
-import { localizePaths } from "../../i18n";
+import { localizeStaticPaths } from "../../i18n";
 
 export async function getStaticPaths() {
   return {
-    paths: localizePaths(
+    paths: localizeStaticPaths(
       (await getCompanies()).map(({ slug }) => ({
         params: { company: slug },
       }))
