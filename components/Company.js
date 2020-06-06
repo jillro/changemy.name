@@ -225,7 +225,7 @@ const Company = ({ company }) => {
             })}
           </p>
           <p>
-            <Link href="/about/[page]" as="/about/how">
+            <Link href="[lang]/about/[page]" as={`/${lang}/about/how`}>
               <a>{t("report_error")}</a>
             </Link>
           </p>
