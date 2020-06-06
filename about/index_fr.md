@@ -1,7 +1,7 @@
 ---
 description: |
  Changer d'identité, de prénom et de genre, est une des tâches
- compliquée d'une transition de genre. Comment les entreprises
+ compliquées d'une transition de genre. Comment les entreprises
  le prennent en compte ?
 ---
 
@@ -11,7 +11,7 @@ parfois affichées publiquement, disponible pour tout le monde
 sur Internet.
 
 Changer d'identité, de prénom et de genre, est une des tâches les
-plus compliquée d'un transition de genre. Dans la plupart des pays
+plus compliquées d'un transition de genre. Dans la plupart des pays
 du monde, des obstacles légaux existent. Mais le fait que la plupart
 des entreprises considèrent que les prénoms et le genre de leurs
 clients ne peut pas changer ajoute une autre difficulté.
