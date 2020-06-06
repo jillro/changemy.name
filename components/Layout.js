@@ -55,7 +55,10 @@ export default function Layout({
     <>
       <Head>
         <title>{title ? `${title} - changemy.name` : "changemy.name"}</title>
-        <meta property="og:title" content={title || "changemy.name"} />
+        <meta
+          property="og:title"
+          content={title ? `${title} - changemy.name` : "changemy.name"}
+        />
         <meta property="og:description" content={description.trim()} />
         <meta
           property="og:image"
