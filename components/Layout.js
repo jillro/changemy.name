@@ -62,7 +62,7 @@ export default function Layout({
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Bar as="header" style={{ marginBottom: "15px" }}>
+      <Bar as="header">
         {headerContent}
         <Container as="div" style={{ marginTop: "15px", marginBottom: "15px" }}>
           <Row align="center" justify="flex-end">
@@ -88,15 +88,15 @@ export default function Layout({
           </Row>
         </Container>
       </Bar>
-      <Container>
-        {notIndex && (
+      {notIndex && (
+        <Container style={{ marginTop: "15px" }}>
           <Hide over="530">
             <Right>
               <LanguageSwitcher />
             </Right>
           </Hide>
-        )}
-      </Container>
+        </Container>
+      )}
       {children}
       <Footer />
     </>
