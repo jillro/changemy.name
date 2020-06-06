@@ -50,6 +50,19 @@ export const PullRight = styled.div`
 `;
 
 /**
+ * Media queries
+ */
+export const Hide = styled.div`
+  @media (max-width: ${({ under }) => under}px) {
+    display: none;
+  }
+
+  @media (min-width: ${({ over }) => over}px) {
+    display: none;
+  }
+`;
+
+/**
  * Grid
  */
 

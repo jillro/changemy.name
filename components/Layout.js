@@ -5,8 +5,10 @@ import {
   Bar,
   Column,
   Container,
+  Hide,
   lightBackgound,
   PullRight,
+  Right,
   Row,
 } from "./styleUtils";
 import Footer from "./Footer";
@@ -64,30 +66,35 @@ export default function Layout({
         {headerContent}
         <Container as="div" style={{ marginTop: "15px", marginBottom: "15px" }}>
           <Row align="center" justify="flex-end">
-            <Column size="fill" collapse="300">
-              <Row>
-                {notIndex && (
-                  <Column size="fixed">
-                    <Link href="/[lang]" as={`/${lang}`}>
-                      <a>
-                        <ToolbarLogo />
-                      </a>
-                    </Link>
-                  </Column>
-                )}
-                <Column size="fill">
-                  <Search />
-                </Column>
-              </Row>
-            </Column>
             {notIndex && (
               <Column size="fixed">
-                <LanguageSwitcher light />
+                <Link href="/[lang]" as={`/${lang}`}>
+                  <a>
+                    <ToolbarLogo />
+                  </a>
+                </Link>
               </Column>
+            )}
+            <Column size="fill">
+              <Search />
+            </Column>
+            {notIndex && (
+              <Hide under="530">
+                <Column size="fixed">
+                  <LanguageSwitcher light />
+                </Column>
+              </Hide>
             )}
           </Row>
         </Container>
       </Bar>
+      <Container>
+        <Hide over="530">
+          <Right>
+            <LanguageSwitcher />
+          </Right>
+        </Hide>
+      </Container>
       {children}
       <Footer />
     </>
