@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import Company from "../../components/Company";
 import React from "react";
 import { localizeStaticPaths } from "../../i18n";
+import { useTranslation } from "react-i18next";
 
 export async function getStaticPaths() {
   return {
@@ -26,10 +27,11 @@ export async function getStaticProps(context) {
 }
 
 export default function CompanyPage({ company }) {
+  const { t } = useTranslation();
   return (
     <Layout
       title={company.name}
-      description={`Lean how to change your name and gender with ${company.name}.`}
+      description={t("company_meta_description", { company: company.name })}
     >
       <Container main>
         <Company company={company} />
