@@ -14,7 +14,7 @@ export const gutter = "15px";
 export const neutralColor = "#6C747C";
 export const okColor = "#2DA547";
 export const warningColor = "#FFC006";
-export const badColor = "#EF5C2F";
+export const badColor = "#DF3C2F";
 export const blockingColor = "#D01700";
 
 /**
