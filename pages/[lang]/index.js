@@ -8,13 +8,7 @@ import {
 } from "../../components/styleUtils";
 import Layout from "../../components/Layout";
 import LastCompanies from "../../components/LastCompanies";
-import {
-  getAboutPage,
-  getCommonProps,
-  getCompanies,
-  getCompany,
-  getTags,
-} from "../../lib";
+import { getAboutPage, getCommonProps, getCompany } from "../../lib";
 import React from "react";
 import { localizeStaticPaths } from "../../i18n";
 import { LanguageSwitcher } from "../../components/LanguageSwitcher";
@@ -71,8 +65,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  let companiesList = await getCompanies();
-  let tags = await getTags();
+  let commonProps = await getCommonProps(context);
+  let { companiesList } = commonProps;
 
   let homepageCompanies = (
     await Promise.all(companiesList.map(({ slug }) => getCompany(slug)))
@@ -88,7 +82,7 @@ export async function getStaticProps(context) {
     props: {
       homepageCompanies,
       indexPage,
-      ...(await getCommonProps(context)),
+      ...commonProps,
     },
   };
 }
