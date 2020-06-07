@@ -33,7 +33,7 @@ export const AllCompanies = ({ companies }) => {
           <li key={company.slug}>
             <Row align="end">
               <Column size="fixed">
-                <Link href="/[lang]/[slug]" as={`/${lang}/${company.slug}`}>
+                <Link href="/[lang]/[company]" as={`/${lang}/${company.slug}`}>
                   <a>{company.name}</a>
                 </Link>
               </Column>
