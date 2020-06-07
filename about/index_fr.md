@@ -14,7 +14,7 @@ Changer d'identité, de prénom et de genre, est une des tâches les
 plus compliquées d'un transition de genre. Dans la plupart des pays
 du monde, des obstacles légaux existent. Mais le fait que la plupart
 des entreprises considèrent que les prénoms et le genre de leurs
-clients ne peut pas changer ajoute une autre difficulté.
+clients ne peuvent pas changer ajoute une autre difficulté.
 
 Un service ou une entreprise qui n'exclue pas les personnes
 trans devrait&nbsp;:
