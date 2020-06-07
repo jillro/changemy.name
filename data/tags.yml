@@ -12,6 +12,7 @@
       labels:
         en: User can change first name through form.
         fr: Il est possible de changer de prénom par un simple formulaire.
+
 - name: Support
   labels:
     fr: Assistance client / support technique
@@ -47,6 +48,13 @@
       labels:
         en: Legal papers are required, although they are not necessary to open an account.
         fr: Des papiers d'identité sont demandés, alors qu'ils ne sont pas nécessaires pour créer un compte.
+    ask_for_papers.title:
+      type: bad
+      labels:
+        en: Legal papers are required to modify title (Mr., Mrs.), even in a country where it is not part of legal identity.
+        fr: |
+          Des papiers sont exigés pour modifier le titre (M., Mme), y compris dans un pays où le titre ne fait pas partie
+          de l'identité légale.
     ask_for_papers.ok:
       type: information
       labels:
@@ -95,10 +103,24 @@
       labels:
         en: Support tell users to create new account. They accept to change name only after users insist or quote legal
           texts.
-        fr: Le support répond aux utilsiaterus de créer un nouveau compte. Le changement de nom n'est accepté qu'après
+        fr: Le support répond aux utilisateurices de créer un nouveau compte. Le changement de nom n'est accepté qu'après
           que l'utilisateurice insiste ou cite la loi.
     new_account:
       type: blocking
       labels:
         en: Support tell users to open a new account.
         fr: Le support répond aux utilisateurices d'ouvrir un nouveau compte.
+
+- name: Countries law
+  labels:
+    fr: Loi des pays
+  tags:
+    country_law:
+      type: bad
+      labels:
+        en: |
+          Law or government explain clearly what company or service has to do in this situation, and they do not
+          respect this.
+        fr: |
+          Une loi ou une autorité gouvernementale définit clairement ce que l'entreprise ou le service doit faire dans
+          cette situation, et elle ne le respecte pas.
