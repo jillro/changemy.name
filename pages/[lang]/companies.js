@@ -4,6 +4,7 @@ import React from "react";
 import { getCommonProps, getCompany } from "../../lib";
 import { localizeStaticPaths } from "../../i18n";
 import AllCompanies from "../../components/AllCompanies";
+import { useTranslation } from "react-i18next";
 
 export async function getStaticPaths() {
   return {
@@ -26,8 +27,9 @@ export async function getStaticProps(context) {
 }
 
 export default function Companies({ companies }) {
+  const { t } = useTranslation();
   return (
-    <Layout description="prout">
+    <Layout description={t("all_companies_meta_description")}>
       <Container main>
         <AllCompanies companies={companies} />
       </Container>

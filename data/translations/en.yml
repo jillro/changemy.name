@@ -14,3 +14,4 @@ made_by: Made by {{- jill_link}} on her spare time, with help of {{- wikitrans_l
 no_translation: Sorry, this page is not available in your language.
 company_meta_description: How to change your name and gender with {{company}}?
 all_companies: All companies
+all_companies_meta_description: All the companies and services listed on changemy.name

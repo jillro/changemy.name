@@ -14,3 +14,4 @@ made_by: Un site fait par {{- jill_link}} sur son temps libre, avec l'aide de l'
 no_translation: Désolé, cette page n'est pas disponible dans votre langue.
 company_meta_description: Comment changer votre prénom et votre genre avec {{company}} ?
 all_companies: Toutes les entreprises
+all_companies_meta_description: Toutes les entreprises et services listé sur changemy.name
