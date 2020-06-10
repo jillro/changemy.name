@@ -137,15 +137,20 @@ export const CompanyGraph = ({ company, tagsData }) => {
   let allTags = tags
     .map((tagSet) => tagSet.tags)
     .reduce((tags, setTags) => ({ ...tags, ...setTags }), {});
-  let companyColoredTagsC = company.tags.filter((tagSlug) =>
-    COLORED_TAG_TYPES.includes(allTags[tagSlug].type)
-  ).length;
-  let shares = {};
-  for (let i = 0; i < COLORED_TAG_TYPES.length; i++) {
-    let type = COLORED_TAG_TYPES[i];
-    shares[type] =
-      company.tags.filter((tagSlug) => allTags[tagSlug].type === type).length /
-      companyColoredTagsC;
+  let types = company.tags
+    .map((tagSlug) => allTags[tagSlug].type)
+    .filter((type) => COLORED_TAG_TYPES.includes(type));
+
+  let shares = Object.fromEntries(COLORED_TAG_TYPES.map((color) => [color, 0]));
+
+  if (types.includes(TAG_TYPE_BLOCKING)) {
+    shares[TAG_TYPE_BLOCKING] = 1;
+  } else {
+    for (let i = 0; i < COLORED_TAG_TYPES.length; i++) {
+      let type = COLORED_TAG_TYPES[i];
+      shares[type] =
+        types.filter((tagType) => tagType === type).length / types.length;
+    }
   }
   return (
     <Row style={{ height: "10px" }}>
