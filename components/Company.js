@@ -111,7 +111,7 @@ export const TagSet = ({ company, tagSet }) => {
 
   return (
     <>
-      <h3>{tagSet.labels[lang]}</h3>
+      <h3>{tagSet.labels[lang] || tagSet.name}</h3>
       {tags.map(([slug, tag]) => (
         <TagDisplay key={slug} tag={tagSet.tags[slug]} />
       ))}
