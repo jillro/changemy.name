@@ -108,15 +108,15 @@
     new_account:
       type: blocking
       labels:
-        en: Support tell users to open a new account.
-        fr: Le support répond aux utilisateurices d'ouvrir un nouveau compte.
+        en: Support tell users to open a new account, or refuse by any means to change account name.
+        fr: Le support répond aux utilisateurices d'ouvrir un nouveau compte, ou refuse clairement de changer le prénom.
 
 - name: Countries law
   labels:
     fr: Loi des pays
   tags:
     country_law:
-      type: bad
+      type: blocking
       labels:
         en: |
           Law or government explain clearly what company or service has to do in this situation, and they do not
