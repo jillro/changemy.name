@@ -10,7 +10,7 @@ const LastCompanies = ({ companiesData }) => {
   const { t } = useTranslation();
   return (
     <>
-      <Row align="end">
+      <Row align="flex-end">
         <Column>
           <h1>{t("last_companies_heading")} </h1>
         </Column>

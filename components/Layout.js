@@ -67,6 +67,7 @@ export default function Layout({
         <meta name="twitter:card" content="summary_large_image" />
         {Object.keys(langs).map((code) => (
           <link
+            key={code}
             rel="alternate"
             hrefLang={code}
             href={`https://changemy.name/${localizePath(router.asPath, code)}`}
