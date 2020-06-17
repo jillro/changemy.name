@@ -22,7 +22,7 @@
       labels:
         en: User needs to write to support explaining situation, althouth some
           changes could be automated with a form.
-        fr: Il est nécessaire d'écrire au support, alors que certains changements pourrait se faire automatiquement.
+        fr: Il est nécessaire d'écrire au support, alors que certains changements pourraient se faire automatiquement.
     support.ok:
       type: information
       labels:
