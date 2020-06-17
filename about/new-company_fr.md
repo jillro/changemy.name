@@ -16,7 +16,7 @@ qui les excluent à réagir, alors merci beaucoup !
 L'équipe du projet traite toutes les informations reçues, et votre identité
 est gardée secrète à moins que vous ne demandiez à être crédité⋅e.
 
-Envoyez juste un email à [info@changemy.name](mailto:info@changemy.name)
+Envoyez juste un e-mail à [info@changemy.name](mailto:info@changemy.name)
 avec les informations suivantes :
 
 > **Détails du service ou de l'entreprise**
@@ -49,4 +49,4 @@ avec les informations suivantes :
 > **Votre contribution**
 > * Voulez-vous être crédité⋅e ? Si oui, merci d'indiquer :
 >   * Votre nom ou votre pseudonyme
->   * Optionellement, une adresse web (site personnel, compte Twitter...)
+>   * Optionnellement, une adresse web (site personnel, compte Twitter...)
