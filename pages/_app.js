@@ -3,7 +3,8 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "../components/globalStyle.css";
 import { loadI18n } from "../i18n";
-import React from "react";
+import React, { useEffect } from "react";
+import Router from "next/router";
 
 config.autoAddCss = false;
 
@@ -13,6 +14,16 @@ export default function App({ Component, pageProps }) {
   let { companiesList, tags, lang, langs, strings } = pageProps;
 
   loadI18n(lang, strings);
+
+  useEffect(() => {
+    Router.events.on("routeChangeStart", (url) => {
+      if (window && window._paq) {
+        window._paq.push(["setCustomUrl", url]);
+        window._paq.push(["setDocumentTitle", document.title]);
+        window._paq.push(["trackPageView"]);
+      }
+    });
+  });
 
   return (
     <dataContext.Provider value={{ companiesList, tags, lang, langs }}>
