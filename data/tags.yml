@@ -20,9 +20,9 @@
     support:
       type: warning
       labels:
-        en: User needs to write to support explaining situation, althouth the
-          change could be automated with a form.
-        fr: Il est nécessaire d'écrire au support, alors que le changement pourrait se faire automatiquement.
+        en: User needs to write to support explaining situation, althouth some
+          changes could be automated with a form.
+        fr: Il est nécessaire d'écrire au support, alors que certains changements pourrait se faire automatiquement.
     support.ok:
       type: information
       labels:
@@ -58,8 +58,8 @@
     ask_for_papers.ok:
       type: information
       labels:
-        en: Legal papers are required, but this is justified by legal or security constraints.
-        fr: Des papiers d'identité sont demandés, mais cela s'explique par des raisons légales ou de sécurité.
+        en: Legal papers are required for name, but this is justified by legal or security constraints.
+        fr: Des papiers d'identité sont demandés pour le changement de prénom, mais cela s'explique par des raisons légales ou de sécurité.
 
 - name: Public identity and privacy
   labels:
