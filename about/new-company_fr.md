@@ -29,7 +29,7 @@ avec les informations suivantes :
 > 
 > * Quand avez vous essayé de changer votre prénom ou votre genre ?
 > * Y a-t-il un formulaire ou vous pouvez changer votre prénom, votre genre ou les deux ?
-> * Si non, lorsque vous avez contacté le support, vous ont-ils mégenré⋅e (appelé par votre mauvais genre)
+> * Si non, lorsque vous avez contacté le support, vous ont-ils mégenré⋅e (utilisé un mauvais genre)
 >alors qu'ils avaient les informations correctes quand à votre genre ?
 > * La première réaction du support a-t-elle été de vous demander de créer un nouveau compte ?
 >Ont-ils changé cette recommandation après que vous ayez insisté ?
