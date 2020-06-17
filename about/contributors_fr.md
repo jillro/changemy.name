@@ -20,3 +20,4 @@ Les personnes suivantes ont contribué à lister des entreprises :
 
 * [Niléane](https://twitter.com/Nildeala)
 * [Lucie](https://twitter.com/QuesbeThe2nd)
+* [Newin](https://twitter.com/newincpp)
