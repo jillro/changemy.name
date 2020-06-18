@@ -35,7 +35,7 @@ export const BrandName = styled.h1`
 `;
 
 const Logo = styled.img`
-  width: 300px;
+  max-width: 300px;
   height: auto;
   max-height: 150px;
   margin: 30px auto;
