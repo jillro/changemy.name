@@ -4,5 +4,5 @@ Cependant, [le nom d'utilisateur ne peut pas changer](https://support.spotify.co
 Le nom d'utilisateur⋅ices est public, car il apparaît dans l'URL des profils partagés.
 
 Il semblerait que le problème ne se pose pas pour les nouveaux comptes,
-car les noms d'utilisateur⋅ices sont des suites aléatoires de chiffres et de lettres,
+car les noms d'utilisateur⋅ice sont des suites aléatoires de chiffres et de lettres,
 mais le problème existe toujours pour les anciens comptes.
