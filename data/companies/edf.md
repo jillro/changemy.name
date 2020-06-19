@@ -12,7 +12,7 @@ defaultLang: fr
 ---
 
 Il est possible de changer son prénom par [un simple formulaire](https://particulier.edf.fr/fr/accueil/espace-client/mon-compte/changer-l-orthographe-de-mon-nom-ou-mon-prenom.html).
-Celui-ci est normalement conçu pour les changements orthographique, et les
+Celui-ci est normalement conçu pour les changements orthographiques, et les
 modifications sont ensuite validées par le support, mais aucune
 utilisateur⋅ice n'a rapporté de refus jusqu'à présent.
 
