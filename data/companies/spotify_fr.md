@@ -9,5 +9,7 @@ mais le problème existe toujours pour les anciens comptes.
 
 Il est possible d'obtenir du [support](https://support.spotify.com/fr/contact-spotify-privacy/)
 de migrer ses listes de lectures et quelques autres données
-vers un nouveau compte. L'historique de lecture est cependant perdu, avec toutes
-les listes générées automatiquement par Spotify.
+vers un nouveau compte. Selon le support, l'historique de lecture est cependant perdu, avec toutes
+les listes générées automatiquement par Spotify. Mais des utilisateur⋅ices indiquent ne pas
+avoir eu ce problème, donc si vous avez effectué cette opération récemment,
+[aidez-nous à préciser cette fiche](mailto:info@changemy.name) !
