@@ -12,6 +12,6 @@ about_how_does_this_work: How does this work?
 about_how_to_contribute: How to contribute ❤
 made_by: Made by {{- jill_link}} on her spare time, with help of {{- wikitrans_link}} team
 no_translation: Sorry, this page is not available in your language.
-company_meta_description: How to change your name and gender with {{company}}?
+company_meta_description: "Change your name and gender with {{company}}: how to do?"
 all_companies: All companies
 all_companies_meta_description: All the companies and services listed on changemy.name
