@@ -2,6 +2,7 @@
 name: EDF
 tags:
 - form.name
+- good_support
 - support
 logo: png
 name_in_logo: yes
