@@ -74,7 +74,7 @@ export async function getStaticProps(context) {
     .sort((c1, c2) => {
       return new Date(c2.updated) - new Date(c1.updated);
     })
-    .slice(0, 10);
+    .slice(0, 9);
 
   let indexPage = await getAboutPage("index", context.params.lang);
 
