@@ -6,3 +6,8 @@ Le nom d'utilisateur⋅ices est public, car il apparaît dans l'URL des profils 
 Il semblerait que le problème ne se pose pas pour les nouveaux comptes,
 car les noms d'utilisateur⋅ice sont des suites aléatoires de chiffres et de lettres,
 mais le problème existe toujours pour les anciens comptes.
+
+Il est possible d'obtenir du [support](https://support.spotify.com/fr/contact-spotify-privacy/)
+de migrer ses listes de lectures et quelques autres données
+vers un nouveau compte. L'historique de lecture est cependant perdu, avec toutes
+les listes générées automatiquement par Spotify.
