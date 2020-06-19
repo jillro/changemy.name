@@ -12,6 +12,13 @@
       labels:
         en: User can change first name through form.
         fr: Il est possible de changer de prénom par un simple formulaire.
+    private_bug:
+      type: warning
+      labels:
+        en: Former name is still displayed in some places even after change has been made, but this places are
+          only visible to user. This seems to be a bug and not by design.
+        fr: L'ancien nom apparaît toujours à certains endroits, mais de manière visible par l'utilisateur⋅ice uniquement.
+          Cela semble être un problème technique et non intentionnel.
 
 - name: Support
   labels:
@@ -93,6 +100,14 @@
           but those comments are hard to find if one does not know user's former name.
         fr: Le service a un système de commentaire ou de discussion publique entre les utilisateurices, dans lequel il
           peut être fait mention de l'ancien nom, mais ils sont difficiles à trouver sans connaître celui-ci.
+    public_bug:
+      type: blocking
+      labels:
+        en: Former name is still publicly displayed in some places even after change has been made. This seems to be a
+          bug and not by design.
+        fr: L'ancien nom apparaît toujours publiquement à certains endroits. Cela semble être un problème technique
+          et non intentionnel.
+
 
 - name: Service continuity
   labels:
