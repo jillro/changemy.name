@@ -145,6 +145,8 @@ export const CompanyGraph = ({ company, tagsData }) => {
 
   if (types.includes(TAG_TYPE_BLOCKING)) {
     shares[TAG_TYPE_BLOCKING] = 1;
+  } else if (types.length == 0) {
+    shares[TAG_TYPE_INFORMATION] = 1;
   } else {
     for (let i = 0; i < COLORED_TAG_TYPES.length; i++) {
       let type = COLORED_TAG_TYPES[i];
