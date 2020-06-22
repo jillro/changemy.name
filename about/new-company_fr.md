@@ -8,9 +8,9 @@ description: |
 # Comment contribuer ❤️
 
 Vous voulez contribuer ? N'importe qui ayant fait l'expérience d'un changement
-de prénom ou de genre avec une entreprise ou un service en ligne peut
+de prénom ou de genre avec une entreprise ou une administration peut
 envoyer une information, afin qu'elle apparaisse sur le site. Cela
-aidera d'autres personnes trans, et pourra pousser les entreprises
+aidera d'autres personnes trans, et pourra pousser les services
 qui les excluent à réagir, alors merci beaucoup !
 
 L'équipe du projet traite toutes les informations reçues, et votre identité
@@ -19,9 +19,9 @@ est gardée secrète à moins que vous ne demandiez à être crédité⋅e.
 Envoyez juste un e-mail à [info@changemy.name](mailto:info@changemy.name)
 avec les informations suivantes :
 
-> **Détails du service ou de l'entreprise**
-> * Nom du service ou de l'entreprise
-> * Pays (si l'entreprise est locale)
+> **Détails du service**
+> * Nom du service
+> * Pays (si l'entreprise ou l'administration est locale)
 > * Adresse du site internet
 > * Une explication en une ou deux phrases de ce que fait le service
 >

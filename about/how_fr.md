@@ -6,7 +6,7 @@ description: |
 
 # Comment ça marche
 
-Pour chaque entreprise ou service, des étiquettes sont attribuées
+Pour chaque service, des étiquettes sont attribuées
 à partir des expériences d'utilisateur⋅irces trans qui ont
 essayé de mettre à jour leurs prénoms ou leur genre.
 
@@ -20,6 +20,6 @@ sont pas importantes tant que ce problème bloquant existe.
 Vous pouvez lire [la liste complète des étiquettes](https://github.com/jillro/changemy.name/blob/master/data/tags.yml).
 
 Si vous remarquez une erreur sur une page, en tant qu'utilisateur⋅ice
-qui a fait l'expérience d'un changement de prénom avec une entreprise,
-ou en tant que représentant⋅e vous même d'une entreprise, n'hésitez pas
-à écrire à [info@changemy.name](mailto:info@changemy.name).
+qui a fait l'expérience d'un changement de prénom avec un service,
+ou en tant que représentant⋅e vous même d'une entreprise ou une
+administration, n'hésitez pas à écrire à [info@changemy.name](mailto:info@changemy.name).

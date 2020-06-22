@@ -16,7 +16,7 @@ Merci beaucoup à l'équipe du [Wiki Trans](https://wikitrans.co/) pour
 l'inspiration et pour leur travail formidable. Les illustrations sont
 de [Katerina Limpitsouni](https://undraw.co/).
 
-Les personnes suivantes ont contribué à lister des entreprises :
+Les personnes suivantes ont contribué à lister des services :
 
 * [Niléane](https://twitter.com/Nildeala)
 * [Lucie](https://twitter.com/QuesbeThe2nd)
