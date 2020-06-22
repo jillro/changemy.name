@@ -18,7 +18,7 @@ modifications sont ensuite validées par le support, mais aucune
 utilisateur⋅ice n'a rapporté de refus jusqu'à présent.
 
 En déposant [une demande au support](https://particulier.edf.fr/fr/accueil/espace-client/contact/demande/formulaire/donnees-personnelles.html),
-le genre peut-être modifié. Aucune utilisateur⋅ice n'a rapporté de demande de pièce justificative.
+le genre peut être modifié. Aucune utilisateur⋅ice n'a rapporté de demande de pièce justificative.
 
 À noter, en France, un contrat EDF à votre nouveau prénom et genre peut constituer
 une très bonne pièce pour vos dossiers de [changement de prénom](https://wikitrans.co/2019/11/26/changement-de-prenoms-en-mairie/)
