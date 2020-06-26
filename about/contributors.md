@@ -10,7 +10,7 @@ The data on the website is the collective work of all trans people who
 contributed their experience.
 
 The website itself was made by [Jill Royer](https://jillroyer.me), with
-help of [Menica](https://t.co/GnRihMaBhY?amp=1) for the design.
+help of [Menica Folden](https://twitter.com/MenicaFolden) for the design.
 Many thanks to the [Wiki Trans](https://wikitrans.co/) team for the
 inspiration and for their amazing work. Illustrations are
 by [Katerina Limpitsouni](https://undraw.co/).
