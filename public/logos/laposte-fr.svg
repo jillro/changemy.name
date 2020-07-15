@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Calque_1"
+   data-name="Calque 1"
+   viewBox="0 0 629.099 240.581"
+   version="1.1"
+   sodipodi:docname="La Poste logo.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+  <metadata
+     id="metadata31">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>La Poste logo</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs29">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient832">
+      <stop
+         style="stop-color:#f0e63c;stop-opacity:1"
+         offset="0"
+         id="stop828" />
+      <stop
+         style="stop-color:#e6af32;stop-opacity:1"
+         offset="1"
+         id="stop830" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient832"
+       id="linearGradient836"
+       gradientUnits="userSpaceOnUse"
+       x1="44.676788"
+       y1="94.490555"
+       x2="213.14938"
+       y2="182.84714" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="784"
+     inkscape:window-height="821"
+     id="namedview27"
+     showgrid="false"
+     inkscape:zoom="1.6005749"
+     inkscape:cx="118.68815"
+     inkscape:cy="186.61906"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Calque_1" />
+  <title
+     id="title2">La Poste logo</title>
+  <!--l-->
+  <path
+     style="fill:#706f6f;fill-opacity:1"
+     d="M306.421,100.687h-7.938v36.384a2.639,2.639,0,0,0,2.837,2.823h23.718l3.766-7.259H306.421Z"
+     id="path4" />
+  <!--a-->
+  <path
+     style="fill:#706f6f;fill-opacity:1"
+     d="M358.27,100.318h-8.105l-20.518,39.577H338.2l3.674-7.277h24.57l2.413,4.778c1.183,2.344,2.281,2.5,5.361,2.5h4.573Zm-12.82,25.214,8.707-17.245,8.707,17.245Z"
+     id="path6" />
+  <!--p-->
+  <path
+     style="fill:#706f6f;fill-opacity:1"
+     d="M402.521,128.183v11.712h-7.94V100.687c4.17-.107,9.8-.268,14.455-.268,9.079,0,15.124,1.288,18.718,4.882a11.466,11.466,0,0,1,3.187,8.543c0,11.326-8.842,14.407-21.453,14.407C407.767,128.251,404.554,128.209,402.521,128.183Zm0-7.261c2,.041,4.52.069,6.258.069,5.092,0,9.76-.154,12.25-2.645a5.766,5.766,0,0,0,1.656-4.369,5.41,5.41,0,0,0-1.345-3.659c-2.486-2.486-6.1-2.64-12.561-2.64-1.738,0-4.254.028-6.258.069Z"
+     id="path8" />
+  <!--o-->
+  <path
+     style="fill:#706f6f;fill-opacity:1"
+     d="M482.577,120.29c0,11.235-8.841,20.375-23.695,20.375s-23.695-9.14-23.695-20.375,8.841-20.375,23.695-20.375S482.577,109.055,482.577,120.29Zm-23.695-13.246c-9,0-15.422,5.217-15.422,13.246s6.417,13.246,15.422,13.246,15.422-5.217,15.422-13.246S467.888,107.044,458.883,107.044Z"
+     id="path10" />
+  <!--s-->
+  <path
+     style="fill:#706f6f;fill-opacity:1"
+     d="M522.7,104.308c-4.306-2.688-11.3-4.394-16.588-4.394-9.968,0-17.8,5.24-17.8,12.529,0,13.731,27.032,8.637,27.032,16.789,0,3.324-4.943,4.746-9.168,4.746a28.378,28.378,0,0,1-15.8-4.952l-4.064,6.045c4.926,3.359,12.856,5.595,19.171,5.595,9.871,0,18.131-4.6,18.131-12.3,0-13.937-26.909-9.6-26.909-17.158,0-3.2,4.456-4.6,9.266-4.6a24.422,24.422,0,0,1,12.991,3.959Z"
+     id="path12" />
+  <!--t-->
+  <polygon
+     fill="#706f6f"
+     points="564.357 100.687 526.457 100.687 526.457 107.945 541.299 107.945 541.299 139.893 549.239 139.893 549.239 107.945 564.357 107.945 564.357 100.687"
+     id="polygon14" />
+  <!--e-->
+  <path
+     style="fill:#706f6f;fill-opacity:1"
+     d="M569.346,100.687v36.384a2.638,2.638,0,0,0,2.837,2.823H604.14v-7.258H577.286v-9.125h23.98v-7.258h-23.98v-8.307h26.141v-7.258H569.346"
+     id="path16" />
+  <path
+     style="fill:url(#linearGradient836);stroke-width:0.23972674;fill-opacity:1"
+     d="M 110.03278,212.33289 C 81.335527,211.05968 50.293437,199.64348 35.36701,173.56274 21.368375,148.92948 28.551467,117.86131 44.306779,95.871553 69.297144,60.279484 110.29056,38.022732 152.52979,30.257343 c 32.41956,-5.745908 68.92375,-2.613541 95.40927,18.624045 17.97411,14.131242 26.09247,38.524172 21.27684,60.735432 -7.10899,34.3057 -33.95143,61.02029 -63.2182,78.27403 -28.83062,16.80057 -62.52814,26.01726 -95.96492,24.44204 z"
+     id="path3722"
+     inkscape:connector-curvature="0" />
+  <!--1-->
+  <path
+     style="fill:#003da5;fill-opacity:1"
+     d="M97.534,87.224c5.39,1.934,22.928,8.1,32.71,14.741.323.219.943.659.943.659l72.876-1.141c.127-.172,2.809-4.894,4.4-7.939,1.741-3.339,1.859-6.2-.114-8.1-2.145-2.062-5.617-2.39-12.629-2.39H97.923c-.78,0-2.763-.134-3.083,1.471a1.736,1.736,0,0,0,.432,1.493A5.881,5.881,0,0,0,97.534,87.224Z"
+     id="path20" />
+  <!--2-->
+  <path
+     style="fill:#003da5;fill-opacity:1"
+     d="M244.083,105.519c-1.618.045-108.323,1.676-109.978,1.741-.888.035-1.147.238-1.152,1.195-.041,7.742-10.291,15.183-24.239,21.835-14.713,7.018-33.184,14-42.784,17.535-2.288.843-6.39,2.291-7.712,2.964-1.055.536-1.786,1.366-1.451,2.329s1.4,1.456,5.053.487c1.633-.434,3.471-.882,5.495-1.409,18.431-4.8,52.189-13.249,85.067-21.462,34.045-8.5,67.609-15.856,92.214-20.291,1.933-.348,3.528-1.392,3.446-2.863C247.966,106.206,246.368,105.455,244.083,105.519Z"
+     id="path22" />
+  <!--3-->
+  <path
+     style="fill:#003da5;fill-opacity:1"
+     d="M156.365,153.232c.006,0,4.8.127,8.3-1.971,5.636-3.381,13.045-9.52,23.542-24.278L75.717,154.623Z"
+     id="path24" />
+</svg>
