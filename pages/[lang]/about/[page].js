@@ -4,6 +4,7 @@ import React from "react";
 import { BlueWarning, Container } from "../../../components/styleUtils";
 import { localizeStaticPaths } from "../../../i18n";
 import { useTranslation } from "react-i18next";
+import ContributionForm from "../../../components/ContributionForm";
 
 export async function getStaticPaths() {
   return {
@@ -17,13 +18,16 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   return {
     props: {
-      page: await getAboutPage(context.params.page, context.params.lang),
+      page: {
+        slug: context.params.page,
+        ...(await getAboutPage(context.params.page, context.params.lang)),
+      },
       ...(await getCommonProps(context)),
     },
   };
 }
 
-export default function AboutPage({ page }) {
+export default function AboutPage({ page, lang }) {
   const { t } = useTranslation();
 
   return (
@@ -33,7 +37,10 @@ export default function AboutPage({ page }) {
           <BlueWarning>{t("no_translation")}</BlueWarning>
         </Container>
       )}
-      <Container main dangerouslySetInnerHTML={{ __html: page.content }} />
+      <Container main>
+        <div dangerouslySetInnerHTML={{ __html: page.content }} />
+        {page.slug === "new-company" && <ContributionForm lang={lang} />}
+      </Container>
     </Layout>
   );
 }

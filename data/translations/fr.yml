@@ -15,3 +15,29 @@ no_translation: Désolé, cette page n'est pas disponible dans votre langue.
 company_meta_description: "Changer votre prénom et votre genre avec {{company}} : comment faire ?"
 all_companies: Tous les services
 all_companies_meta_description: Toutes les entreprises et administrations listées sur changemy.name
+
+contribute_form:
+  answer_placeholder: Tapez votre réponse ici
+  service_details : Détails du service
+  service_name: Nom du service
+  country: Pays (si l'entreprise ou l'administration est locale)
+  website: Adresse du site internet
+  explanation: Une explication en une ou deux phrases de ce que fait le service
+  process: Processus de changement de prénom
+  when: Quand avez vous essayé de changer votre prénom ou votre genre ?
+  form: Y a-t-il un formulaire ou vous pouvez changer votre prénom, votre genre ou les deux ?
+  support_when: Si non, lorsque vous avez contacté le support, vous ont-ils mégenré⋅e (utilisé un mauvais genre) alors qu'ils avaient les informations correctes quand à votre genre ?
+  support_new_account: La première réaction du support a-t-elle été de vous demander de créer un nouveau compte ? Ont-ils changé cette recommandation après que vous ayez insisté ?
+  legal: Preuve légale
+  identity: Que ce soit le support ou un formulaire automatique, une preuve d'identité vous a-t-elle été demandée ?
+  reason: Si oui, qu'elle a été la justification invoquée ? Une preuve d'identité vous avait-elle été demandée lors de votre inscription au service ?
+  official: Cette preuve doit-elle être un papier d'identité officiel ?
+  privacy: Identité publique et vie privée
+  user_id: Le service utilise-t-il un identifiant public que vous ne pouvez changer sans créer un nouveau compte ?
+  comments: Y a-t-il des commentaires public avec votre ancien prénom que vous ne pouvez éditer ou efface ? Peuvent-ils être facilement trouvés par les autres utilisateurs ?
+  contribution: Votre contribution
+  credited: "Voulez-vous être crédité⋅e ? Si oui, merci d'indiquer :"
+  credit_name: Votre nom ou votre pseudonyme
+  credit_url: Optionnellement, une adresse web (site personnel, compte Twitter...)
+  email: Une adresse email où vous contacter si besoin de plus d'informations
+  submit: Envoyer

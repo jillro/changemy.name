@@ -15,3 +15,29 @@ no_translation: Sorry, this page is not available in your language.
 company_meta_description: "Change your name and gender with {{company}}: how to do?"
 all_companies: All services
 all_companies_meta_description: All companies and administrations listed on changemy.name
+
+contribute_form:
+  answer_placeholder: Type your answer here
+  service_details : Service details
+  service_name: Name of the service
+  country: Country (if this is not local company or administration)
+  website: Website URL
+  explanation: Brief explanation of what does the service (one or two sentences)
+  process: Name changing process
+  when: When did you try to change your name?
+  form: Is there any form where you can change your name, gender, or both?
+  support_when: If not, when you contacted support did they misgendered you although they had correct information on your gender?
+  support_new_account: Did support first asked you to create a new account? Did they change this recommendation after you insisted?
+  legal: Legal proof
+  identity: Whether it is support, or an automated form, do they ask you to send an identity proof?
+  reason: If yes, what was the reason given for this? Is an identity proof necessary to register to the service in the first place?
+  official: Does it have to be an official ID?
+  privacy: Public identity and privacy?
+  user_id: Is there a public user id you cannot change without a new account?
+  comments: Are there public comments where you name can appear and which you cannot edit or delete? Are they easy to find for other users?
+  contribution: Your contribution
+  credited: "Do you want to be credited? If yes, please indicate:"
+  credit_name: Name or pseudonyme
+  credit_url: an optional URL (personal website, public Twitter account...)
+  email: An email address to contact you if we need more information
+  submit: Send

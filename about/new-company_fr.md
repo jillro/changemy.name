@@ -16,37 +16,3 @@ qui les excluent à réagir, alors merci beaucoup !
 L'équipe du projet traite toutes les informations reçues, et votre identité
 est gardée secrète à moins que vous ne demandiez à être crédité⋅e.
 
-Envoyez juste un e-mail à [info@changemy.name](mailto:info@changemy.name)
-avec les informations suivantes :
-
-> **Détails du service**
-> * Nom du service
-> * Pays (si l'entreprise ou l'administration est locale)
-> * Adresse du site internet
-> * Une explication en une ou deux phrases de ce que fait le service
->
-> **Processus de changement de prénom**
-> 
-> * Quand avez vous essayé de changer votre prénom ou votre genre ?
-> * Y a-t-il un formulaire ou vous pouvez changer votre prénom, votre genre ou les deux ?
-> * Si non, lorsque vous avez contacté le support, vous ont-ils mégenré⋅e (utilisé un mauvais genre)
->alors qu'ils avaient les informations correctes quand à votre genre ?
-> * La première réaction du support a-t-elle été de vous demander de créer un nouveau compte ?
->Ont-ils changé cette recommandation après que vous ayez insisté ?
->
-> **Preuve légale**
-> * Que ce soit le support ou un formulaire automatique, une preuve d'identité vous a-t-elle été demandée ?
-> * Si oui, qu'elle a été la justification invoquée ? Une preuve d'identité vous avait-elle été demandée
->lors de votre inscription au service ?
-> * Cette preuve doit-elle être un papier d'identité officiel ?
->
-> **Identité publique et vie privée**
-> * Le service utilise-t-il un identifiant public que vous ne pouvez changer sans
->créer un nouveau compte ?
-> * Y a-t-il des commentaires public avec votre ancien prénom que vous ne pouvez éditer ou efface ?
->Peuvent-ils être facilement trouvés par les autres utilisateurs ?
->
-> **Votre contribution**
-> * Voulez-vous être crédité⋅e ? Si oui, merci d'indiquer :
->   * Votre nom ou votre pseudonyme
->   * Optionnellement, une adresse web (site personnel, compte Twitter...)
