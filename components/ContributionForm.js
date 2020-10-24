@@ -61,7 +61,7 @@ export default function ContributionForm({ lang }) {
   return (
     <Form
       method="POST"
-      action={`https://n8n.jillro.dev/webhook-test/changemyname-${lang}`}
+      action={`https://n8n.jillro.dev/webhook/changemyname-${lang}`}
     >
       <p>
         <strong>{t("contribute_form.service_details")}</strong>
