@@ -2,8 +2,7 @@ import React, { useContext, useState } from "react";
 import styled from "styled-components";
 
 import { primaryColor, SROnly } from "./styleUtils";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Search as SearchIcon } from "react-feather";
 import Fuse from "fuse.js";
 import Link from "next/link";
 import { dataContext } from "../pages/_app";
@@ -55,7 +54,7 @@ const TextInput = styled.input`
 const SearchInput = (props) => {
   return (
     <InputContainer>
-      <FontAwesomeIcon icon={faSearch} />
+      <SearchIcon />
       <SROnly>Search </SROnly>
       <TextInput {...props} size="1" />
     </InputContainer>

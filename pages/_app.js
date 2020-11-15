@@ -1,12 +1,8 @@
 import "normalize.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 import "../components/globalStyle.css";
 import { loadI18n } from "../i18n";
 import React, { useEffect } from "react";
 import Router from "next/router";
-
-config.autoAddCss = false;
 
 export const dataContext = React.createContext({});
 

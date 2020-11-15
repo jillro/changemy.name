@@ -17,14 +17,7 @@ import {
   SROnly,
   warningColor,
 } from "./styleUtils";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBan,
-  faCheck,
-  faExclamationTriangle,
-  faInfoCircle,
-  faTimes,
-} from "@fortawesome/free-solid-svg-icons";
+import { Slash, Check, AlertTriangle, Info, X } from "react-feather";
 import { dataContext } from "../pages/_app";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
@@ -64,22 +57,20 @@ const COLORED_TAG_TYPES = [
 ];
 
 const icons = {
-  [TAG_TYPE_GOOD]: [faCheck, okColor],
-  [TAG_TYPE_INFORMATION]: [faInfoCircle, neutralColor],
-  [TAG_TYPE_WARNING]: [faExclamationTriangle, warningColor],
-  [TAG_TYPE_BAD]: [faTimes, badColor],
-  [TAG_TYPE_BLOCKING]: [faBan, blockingColor],
+  [TAG_TYPE_GOOD]: [Check, okColor],
+  [TAG_TYPE_INFORMATION]: [Info, neutralColor],
+  [TAG_TYPE_WARNING]: [AlertTriangle, warningColor],
+  [TAG_TYPE_BAD]: [X, badColor],
+  [TAG_TYPE_BLOCKING]: [Slash, blockingColor],
 };
 
 const Tag = ({ tag, className }) => {
   const { lang } = useContext(dataContext);
+  let Icon = icons[tag.type][0];
+  let color = icons[tag.type][1];
   return (
     <div className={className}>
-      <FontAwesomeIcon
-        icon={icons[tag.type][0]}
-        fixedWidth
-        color={icons[tag.type][1]}
-      />
+      <Icon size={24} color={color} />
       <p>{tag.labels[lang]}</p>
     </div>
   );
@@ -96,6 +87,11 @@ const TagDisplay = styled(Tag)`
     margin-left: 10px;
     margin-top: 0;
     margin-bottom: 0;
+  }
+
+  > *:first-child {
+    width: 18px;
+    flex-shrink: 0;
   }
 `;
 
