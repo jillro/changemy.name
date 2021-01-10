@@ -1,6 +1,5 @@
 {
   "name": "changemy.name",
-  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "env NODE_ICU_DATA=node_modules/full-icu next dev",
