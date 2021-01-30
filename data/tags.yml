@@ -75,7 +75,7 @@
     permanent_id:
       type: blocking
       labels:
-        en: Users can change their display name, but public user id is immutable.
+        en: Users may change their display name, but public user id is immutable.
         fr: Les utilisateurices peuvent changer leur nom d'affichage, mais l'identifiant est public
           et ne peut pas être changé.
     profile_comments:
