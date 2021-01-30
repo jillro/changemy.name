@@ -8,7 +8,7 @@ logo: svg
 name_in_logo: yes
 countries:
 - fr
-updated: 2020-06-22
+updated: 2021-01-30
 defaultLang: fr
 ---
 
