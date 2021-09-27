@@ -7,9 +7,5 @@ countries:
 - ch
 ---
 
-En France, la décision [MLD-2014-058 du Défenseur des droits](https://ant-france.eu/wp-content/uploads/2019/01/dd_decision_MLD-2014-058.pdf)
-explique clairement que «&nbsp;le titre de civilité n’est pas un élément
-de l’état civil&nbsp;» et que faire apparaître un titre malgré la
-demande du ou de la cliente relève «&nbsp;de la qualification de harcèlement discriminatoire
-fondée sur le sexe et l’identité sexuelle&nbsp;». Aucun papier ne doit donc
-être exigé pour faire modifier le titre.
+Le genre n'est pas utilisé, et le prénom est modifiable tout comme le nom dans le compte,
+sans demander au support. Cependant, pour modifier son pseudo il faut contacter le support.
