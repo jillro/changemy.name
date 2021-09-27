@@ -1,1 +1,0 @@
-_N_E=(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[7],{THoP:function(n,_,o){(window.__NEXT_P=window.__NEXT_P||[]).push(["/[lang]",function(){return o("ssaF")}])}},[["THoP",0,2,1,3,4,5]]]);
