@@ -3,12 +3,12 @@ name: Engie
 tags:
 - good_support
 - support
-  logo: svg
-  name_in_logo: yes
-  countries:
+logo: svg
+name_in_logo: yes
+countries:
 - fr
-  updated: 2021-09-14
-  defaultLang: fr
+updated: 2021-09-14
+defaultLang: fr
 ---
 
 En déposant contactant le support par la messagerie du site,
