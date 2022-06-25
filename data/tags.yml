@@ -12,6 +12,11 @@
       labels:
         en: User can change first name through form.
         fr: Il est possible de changer de prénom par un simple formulaire.
+    form.username:
+      type: good
+      labels:
+        en: User can change their username through form.
+        fr: Il est possible de changer de nom d'utilisateur par un simple formulaire.
     private_bug:
       type: warning
       labels:
@@ -107,7 +112,16 @@
           bug and not by design.
         fr: L'ancien nom apparaît toujours publiquement à certains endroits. Cela semble être un problème technique
           et non intentionnel.
-
+    redirection.yes:
+      type: information
+      labels:
+        en: A redirection is put in place between your old and new profile.
+        fr: Une redirection est mise en place entre votre ancien et votre nouveau profil.
+    redirection.no:
+      type: information
+      labels:
+        en: Your old profile won't redirect to your new profile.
+        fr: Votre ancien profil ne redirigera pas vers votre nouveau profil.
 
 - name: Service continuity
   labels:
