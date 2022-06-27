@@ -5,7 +5,8 @@
     "dev": "env NODE_ICU_DATA=node_modules/full-icu next dev",
     "build": "env NODE_ICU_DATA=node_modules/full-icu next build && env NODE_ICU_DATA=node_modules/full-icu next export",
     "start": "env NODE_ICU_DATA=node_modules/full-icu next start",
-    "postinstall": "cp -r node_modules/svg-country-flags/svg public/flags"
+    "postinstall": "cp -r node_modules/svg-country-flags/svg public/flags",
+    "deploy": "npm run build && gh-pages publish -t -d out/"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.12.0",
@@ -27,6 +28,7 @@
     "yaml": "^1.10.0"
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "prettier": "^2.2.1"
   }
 }
