@@ -1,12 +1,12 @@
 ---
 name: La Banque Postale
 tags:
-- ask_for_papers.ok
+- ask_for_papers.title
 - support
-- good_support
+- bad_support
 logo: svg
 name_in_logo: yes
-updated: 2020-11-15
+updated: 2023-03-15
 countries:
  - fr
 defaultLang: fr
@@ -22,3 +22,6 @@ de l’état civil&nbsp;» et que faire apparaître un titre malgré la
 demande du ou de la cliente relève «&nbsp;de la qualification de harcèlement discriminatoire
 fondée sur le sexe et l’identité sexuelle&nbsp;». Aucun papier ne doit donc
 être exigé pour faire modifier le titre.
+
+Différents témoignages ayant été rapportés au fil des années, nous faisons ici paraître
+les plus récents.
