@@ -5,7 +5,6 @@ tags:
 - private_bug
 - support.ok
 - ask_for_papers.ok
-- 
 logo: svg
 name_in_logo: yes
 updated: 2023-11-25
