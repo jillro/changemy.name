@@ -4,7 +4,6 @@ import React from "react";
 import { BlueWarning, Container } from "../../../components/styleUtils";
 import { localizeStaticPaths } from "../../../i18n";
 import { useTranslation } from "react-i18next";
-import ContributionForm from "../../../components/ContributionForm";
 
 export async function getStaticPaths() {
   return {
@@ -39,7 +38,6 @@ export default function AboutPage({ page, lang }) {
       )}
       <Container main>
         <div dangerouslySetInnerHTML={{ __html: page.content }} />
-        {page.slug === "new-company" && <ContributionForm lang={lang} />}
       </Container>
     </Layout>
   );
